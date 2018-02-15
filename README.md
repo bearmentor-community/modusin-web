@@ -1,4 +1,4 @@
-# Modusin Web
+# Modusin Web with React
 
 > Modusin is a publishing network for learners
 
