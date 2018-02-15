@@ -1,26 +1,11 @@
 import React, { Component } from 'react'
-import { Grid } from 'semantic-ui-react'
 
-import Navigation from './components/navbar-global/navigation'
-import EditorPick from './components/editor-pick/card'
-import Topics from './components/topic/card'
-
-import 'semantic-ui-css/semantic.min.css'
+import  Homepage from './pages/homepage-global'
 
 export default class App extends Component {
   render() {
     return (
-      <Grid columns={1} padded>
-        <Grid.Column>
-          <Navigation />
-        </Grid.Column>
-        <Grid.Column>
-          <EditorPick />
-        </Grid.Column>
-        <Grid.Column>
-          <Topics />
-        </Grid.Column>
-      </Grid>
+      <Homepage />
     )
   }
 }
