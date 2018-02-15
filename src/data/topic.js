@@ -1,0 +1,46 @@
+module.exports = [
+  {
+    id:0,
+    name:'Technology'
+  },
+  {
+    id:1,
+    name:'Computer'
+  },
+  {
+    id:2,
+    name:'Art'
+  },
+  {
+    id:3,
+    name:'Artificial Intelligence'
+  },
+  {
+    id:4,
+    name:'Augmented Reality'
+  },
+  {
+    id:5,
+    name:'Programming'
+  },
+  {
+    id:6,
+    name:'Motivation'
+  },
+  {
+    id:7,
+    name:'Inspiration'
+  },
+  {
+    id:8,
+    name:'History'
+  },
+  {
+    id:9,
+    name:'Biography'
+  },
+  {
+    id:10,
+    name:'Science'
+  },
+]
