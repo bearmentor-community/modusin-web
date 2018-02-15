@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Input, Header } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
 import ButtonGroup from './buttonGroup'
 
@@ -9,11 +10,13 @@ export default class Navigation extends Component {
         <Menu secondary>
           <Menu.Menu position='left'>
             <Menu.Item>
-              <Header
-                size='huge'
-                content='Modusin.'
-                color='teal'
-              />
+              <Link to='/'>
+                <Header
+                  size='huge'
+                  content='Modusin.'
+                  color='teal'
+                />
+              </Link>
             </Menu.Item>
           </Menu.Menu>
           <Menu.Menu position='right'>
