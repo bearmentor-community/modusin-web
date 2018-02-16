@@ -1,10 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import "./index.css"
+import { AppContainer } from "react-hot-loader"
+
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
 
-import { AppContainer } from "react-hot-loader"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./styles/index.css"
 
 // Wrap the rendering in a function:
 const render = (Component) => {
