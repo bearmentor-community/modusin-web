@@ -54,6 +54,92 @@ yarn deploy
 
 --------------------------------------------------------------------------------
 
+## Component Architecture
+
+### Pages
+
+| Route       | Component
+|-------------|----------
+| `/``        | Home
+| `/post/:id` | Post
+| `/register` | Register
+| `/login`    | Login
+| `/profile`  | Profile
+| `/settings` | Settings
+
+### Size
+
+#### Small
+
+- Logo
+- Topic
+- SearchBox
+- ActionButton
+- ActionAvatar
+- SectionTitle
+- PostTitle
+- PostImage
+- PostSnippet
+- Avatar
+- MetaText
+- MetaTextSmall
+- FooterText
+- ActionInput
+
+#### Medium
+
+- PageTitle
+- PageSubtitle
+- PageText
+- ActionBar
+  - SearchBox
+  - ActionButton
+  - ActionAvatar
+- TopicTags
+  - Array of Topic
+- FeaturedPost
+  - PostTitle
+  - PostImage
+  - PostSnippet
+  - MetaText
+- SmallPost
+  - PostTitle
+  - PostImage
+  - PostSnippet
+  - MetaText
+  - MetaTextSmall
+- ProfileBar
+  - Avatar
+  - MetaText
+  - MetaTextSmall
+- FooterTexts
+  - FooterText
+
+#### Large
+
+- NavigationHeader
+  - Logo
+  - ActionBar
+  - TopicTags
+- FeaturedPosts
+  - FeaturedPost
+- TopPosts
+  - SmallPost
+- PostContent
+  - ProfileBar
+  - PostTitle
+  - PostImage
+  - PostContent
+
+#### Template
+
+- Provider
+- Router
+- Posts
+- Page
+
+--------------------------------------------------------------------------------
+
 ## License
 
 [MIT License](./LICENSE)
