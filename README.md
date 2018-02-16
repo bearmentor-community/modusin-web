@@ -60,12 +60,12 @@ yarn deploy
 
 | Route       | Component
 |-------------|----------
-| `/`         | Home
-| `/post/:id` | Post
-| `/register` | Register
-| `/login`    | Login
-| `/profile`  | Profile
-| `/settings` | Settings
+| `/`         | home
+| `/post/:id` | post
+| `/register` | register
+| `/login`    | login
+| `/profile`  | profile
+| `/setting`  | setting
 
 ### Size
 
