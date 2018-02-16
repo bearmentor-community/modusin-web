@@ -18,37 +18,42 @@ The goal of this app is to clone a [Medium](https://medium.com) web app, called 
 
 ## Development
 
-### Application
+### Installing
 
 Install `yarn` with `npm`
 
 ```sh
 npm install -g yarn
+yarn install
 ```
 
 ### Running
 
 ```sh
-yarn install
 yarn dev
+```
+
+### Building
+
+```sh
+yarn build
 ```
 
 --------------------------------------------------------------------------------
 
 ## Deployment
 
-### Infrastructure
-
-GitHub => Netlify => CloudFlare => modusin.com
-
 ### Application
 
-`node` => `react-scripts`
+`node` => `react` => `react-scripts` => `react-app-rewired`
+
+### Infrastructure
+
+GitHub => Netlify => CloudFlare => mhaidarhanif.org/modusin.com
 
 ### Running
 
 ```sh
-yarn build
 yarn deploy
 ```
 
@@ -115,23 +120,23 @@ yarn deploy
 - FooterTexts
   - FooterText
 
-#### Large
+#### Large Segments
 
-- NavigationHeader
+- SegmentNavigationHeader
   - Logo
   - ActionBar
   - TopicTags
-- FeaturedPosts
+- SegmentFeaturedPosts
   - Array of FeaturedPost
-- TopPosts
+- SegmentLatestPosts
   - Array of SmallPost
-- PostContent
+- SegmentPostContent
   - ProfileBar
   - PostTitle
   - PostImage
   - PostTextContent
 
-#### Template
+#### Templates
 
 - Provider
 - Router
