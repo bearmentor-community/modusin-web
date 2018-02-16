@@ -60,7 +60,7 @@ yarn deploy
 
 | Route       | Component
 |-------------|----------
-| `/``        | Home
+| `/`         | Home
 | `/post/:id` | Post
 | `/register` | Register
 | `/login`    | Login
@@ -122,21 +122,21 @@ yarn deploy
   - ActionBar
   - TopicTags
 - FeaturedPosts
-  - FeaturedPost
+  - Array of FeaturedPost
 - TopPosts
-  - SmallPost
+  - Array of SmallPost
 - PostContent
   - ProfileBar
   - PostTitle
   - PostImage
-  - PostContent
+  - PostTextContent
 
 #### Template
 
 - Provider
 - Router
-- Posts
-- Page
+- PageCommon
+- PagePost
 
 --------------------------------------------------------------------------------
 

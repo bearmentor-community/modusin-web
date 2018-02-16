@@ -1,16 +1,48 @@
 import React, { Component } from "react"
-import "./App.css"
+import axios from "axios"
+
+const URL = process.env.REACT_APP_API_URL
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      token: {},
+      account: {},
+      posts: []
+    }
+  }
+
+  componentDidMount() {
+    axios
+      .get(`${URL}/posts`)
+      .then((res) => {
+        this.setState({
+          posts: res.data.data
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
   render() {
+    const POSTS = this.state.posts
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to Modusin</h1>
+      <div>
+        <header>
+          <h1>Modusin</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul>
+          {POSTS.map((post) => {
+            return (
+              <li key={post.id}>
+                <span>{post.title}</span>: <span>{post.content}</span>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     )
   }
