@@ -18,37 +18,42 @@ The goal of this app is to clone a [Medium](https://medium.com) web app, called 
 
 ## Development
 
-### Application
+### Installing
 
 Install `yarn` with `npm`
 
 ```sh
 npm install -g yarn
+yarn install
 ```
 
 ### Running
 
 ```sh
-yarn install
 yarn dev
+```
+
+### Building
+
+```sh
+yarn build
 ```
 
 --------------------------------------------------------------------------------
 
 ## Deployment
 
-### Infrastructure
-
-GitHub => Netlify => CloudFlare => modusin.com
-
 ### Application
 
-`node` => `react-scripts`
+`node` => `react` => `react-scripts` => `react-app-rewired`
+
+### Infrastructure
+
+GitHub => Netlify => CloudFlare => mhaidarhanif.org/modusin.com
 
 ### Running
 
 ```sh
-yarn build
 yarn deploy
 ```
 
@@ -60,12 +65,12 @@ yarn deploy
 
 | Route       | Component
 |-------------|----------
-| `/``        | Home
-| `/post/:id` | Post
-| `/register` | Register
-| `/login`    | Login
-| `/profile`  | Profile
-| `/settings` | Settings
+| `/`         | home
+| `/post/:id` | post
+| `/register` | register
+| `/login`    | login
+| `/profile`  | profile
+| `/setting`  | setting
 
 ### Size
 
@@ -115,28 +120,28 @@ yarn deploy
 - FooterTexts
   - FooterText
 
-#### Large
+#### Large Segments
 
-- NavigationHeader
+- SegmentNavigationHeader
   - Logo
   - ActionBar
   - TopicTags
-- FeaturedPosts
-  - FeaturedPost
-- TopPosts
-  - SmallPost
-- PostContent
+- SegmentFeaturedPosts
+  - Array of FeaturedPost
+- SegmentLatestPosts
+  - Array of SmallPost
+- SegmentPostContent
   - ProfileBar
   - PostTitle
   - PostImage
-  - PostContent
+  - PostTextContent
 
-#### Template
+#### Templates
 
 - Provider
 - Router
-- Posts
-- Page
+- PageCommon
+- PagePost
 
 --------------------------------------------------------------------------------
 
