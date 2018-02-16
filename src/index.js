@@ -6,12 +6,16 @@ import registerServiceWorker from "./registerServiceWorker"
 
 import { AppContainer } from "react-hot-loader"
 
-ReactDOM.render(
-  <AppContainer>
-    <App />
-  </AppContainer>,
-  document.getElementById("root")
-)
+// Wrap the rendering in a function:
+const render = (Component) => {
+  ReactDOM.render(
+    // Wrap App inside AppContainer
+    <AppContainer>
+      <App />
+    </AppContainer>,
+    document.getElementById("root")
+  )
+}
 
 // Do this once
 registerServiceWorker()
