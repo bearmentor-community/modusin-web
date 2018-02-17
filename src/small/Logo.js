@@ -1,10 +1,17 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const style = {
+  textAlign: "center",
   fontWeight: "bold",
-  textAlign: "center"
+  textDecoration: "none",
+  color: "black"
 }
 
-const Logo = (props) => <h1 style={style}>Modusin</h1>
+const Logo = (props) => (
+  <Link to="/" style={style}>
+    <h1>Modusin</h1>
+  </Link>
+)
 
 export default Logo
