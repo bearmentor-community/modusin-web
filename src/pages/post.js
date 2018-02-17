@@ -1,8 +1,8 @@
 import React from "react"
 
-const Post = () => (
+const Post = (props) => (
   <div>
-    <h2>Post</h2>
+    <h2>Single Post</h2>
   </div>
 )
 

@@ -1,53 +1,32 @@
-import React, { Component } from "react"
-import { BrowserRouter, Route, Link } from "react-router-dom"
+import React from "react"
+import { Route } from "react-router-dom"
 
-import axios from "axios"
+import home from "./pages/home"
 
-const URL = process.env.REACT_APP_API_URL
+import posts from "./pages/posts"
+import post from "./pages/post"
+import topics from "./pages/topics"
+import topic from "./pages/topic"
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      token: {},
-      account: {},
-      posts: []
-    }
-  }
+import register from "./pages/register"
+import login from "./pages/login"
+import profile from "./pages/profile"
+import setting from "./pages/setting"
 
-  componentDidMount() {
-    axios
-      .get(`${URL}/posts`)
-      .then((res) => {
-        this.setState({
-          posts: res.data.data
-        })
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
+const App = () => (
+  <div>
+    <Route exact path={`/`} component={home} />
 
-  render() {
-    const POSTS = this.state.posts
+    <Route path={`/posts`} component={posts} />
+    <Route path={`/p/:id`} component={post} />
+    <Route path={`/topics`} component={topics} />
+    <Route path={`/t/:id`} component={topic} />
 
-    return (
-      <div>
-        <header>
-          <h1>Modusin</h1>
-        </header>
-        <ul>
-          {POSTS.map((post) => {
-            return (
-              <li key={post.id}>
-                <span>{post.title}</span>: <span>{post.content}</span>
-              </li>
-            )
-          })}
-        </ul>
-      </div>
-    )
-  }
-}
+    <Route path={`/register`} component={register} />
+    <Route path={`/login`} component={login} />
+    <Route path={`/profile`} component={profile} />
+    <Route path={`/setting`} component={setting} />
+  </div>
+)
 
 export default App

@@ -1,6 +1,6 @@
 import React from "react"
 
-const Setting = () => (
+const Setting = (props) => (
   <div>
     <h2>Setting</h2>
   </div>
