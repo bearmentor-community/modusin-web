@@ -1,11 +1,12 @@
 import React from "react"
+import Layout from "./Layout"
 
 const LayoutDefault = (props) => (
-  <div>
+  <Layout>
     <h1>LOGO</h1>
     <nav>NAVIGATION</nav>
     {props.children}
-  </div>
+  </Layout>
 )
 
 export default LayoutDefault

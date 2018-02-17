@@ -1,12 +1,11 @@
 import React from "react"
+import Layout from "./Layout"
 
-const Layout = {
-  LayoutAuth: (props) => (
-    <div>
-      <h2>AUTH</h2>
-      {props.children}
-    </div>
-  )
-}
+const LayoutAuth = (props) => (
+  <Layout>
+    <h2>AUTH</h2>
+    {props.children}
+  </Layout>
+)
 
-export default Layout
+export default LayoutAuth
