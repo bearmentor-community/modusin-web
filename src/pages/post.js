@@ -1,9 +1,10 @@
 import React from "react"
+import { default as Layout } from "../templates/LayoutSingle"
 
 const Post = (props) => (
-  <div>
+  <Layout>
     <h2>Single Post</h2>
-  </div>
+  </Layout>
 )
 
 export default Post

@@ -14,12 +14,12 @@ import profile from "./pages/profile"
 import setting from "./pages/setting"
 
 const App = () => (
-  <div>
+  <div id="routes">
     <Route exact path={`/`} component={home} />
-
     <Route path={`/posts`} component={posts} />
-    <Route path={`/p/:id`} component={post} />
     <Route path={`/topics`} component={topics} />
+
+    <Route path={`/p/:id`} component={post} />
     <Route path={`/t/:id`} component={topic} />
 
     <Route path={`/register`} component={register} />

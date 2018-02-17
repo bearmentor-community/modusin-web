@@ -1,9 +1,10 @@
 import React from "react"
+import { default as Layout } from "../templates/LayoutDefault"
 
 const Topic = (props) => (
-  <div>
+  <Layout>
     <h2>Single Topic</h2>
-  </div>
+  </Layout>
 )
 
 export default Topic
