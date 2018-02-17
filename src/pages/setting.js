@@ -1,9 +1,10 @@
 import React from "react"
+import { default as Layout } from "../templates/LayoutSingle"
 
-const Setting = () => (
-  <div>
+const Setting = (props) => (
+  <Layout>
     <h2>Setting</h2>
-  </div>
+  </Layout>
 )
 
 export default Setting
