@@ -1,16 +1,14 @@
 import React from "react"
 import { Row, Col } from "reactstrap"
 
+import FeaturedPost from "../medium/FeaturedPost"
+
 const SegmentFeaturedPosts = (props) => (
   <Row>
     {props.posts.map((post, index) => {
       return (
         <Col key={index}>
-          <div>
-            <h3>{post.title}</h3>
-            <h4>{post.snippet}</h4>
-            <img src={post.image.url} alt={post.image.title} />
-          </div>
+          <FeaturedPost post={post} />
         </Col>
       )
     })}

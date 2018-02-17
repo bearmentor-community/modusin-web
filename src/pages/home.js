@@ -11,11 +11,11 @@ const POSTS = [
     snippet: "The world is changing...",
     image: {
       title: "Abstract",
-      url: "localhost:3000/images/posts/abstract.png"
+      url: "http://localhost:3000/images/posts/abstract.jpg"
     },
     author: {
       name: "M Haidar Hanif",
-      avatar_url: "localhost:3000/images/avatars/mhaidarh.jpg"
+      avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
     }
   },
   {
@@ -25,11 +25,11 @@ const POSTS = [
     snippet: "Human is revolutionizing...",
     image: {
       title: "Leadership",
-      url: "localhost:3000/images/posts/leadership-stage.png"
+      url: "http://localhost:3000/images/posts/leadership-stage.jpg"
     },
     author: {
       name: "Superman",
-      avatar_url: "localhost:3000/images/avatars/mhaidarh.jpg"
+      avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
     }
   }
 ]
