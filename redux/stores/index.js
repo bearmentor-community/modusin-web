@@ -39,10 +39,11 @@ export const initialState = {
   },
 
   new: {
-    title: "", // input title
+    title: "", // input text
+    image_url: "", // input text
     content: "", // input textarea
-    createdAt: "", // save for notes
-    updatedAt: "", // save for notes
+    created_at: "", // save for notes
+    updated_at: "", // save for notes
     loading: false // when submitting
   }
 }
