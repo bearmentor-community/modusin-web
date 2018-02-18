@@ -12,8 +12,8 @@ import thunk from "redux-thunk"
 
 // -----------------------------------------------------------------------------
 
-import reducers from "../redux/reducers"
-import { getAllPosts } from "../redux/actions"
+import reducers from "./redux/reducers"
+import { getAllPosts } from "./redux/actions"
 
 // -----------------------------------------------------------------------------
 

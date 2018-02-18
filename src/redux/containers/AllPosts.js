@@ -2,7 +2,7 @@ import { connect } from "react-redux"
 
 import { getAllPosts } from "../actions"
 
-import SegmentLatestPosts from "../../src/large/SegmentLatestPosts"
+import SegmentLatestPosts from "../../large/SegmentLatestPosts"
 
 const mapStateToProps = state => ({
   posts: getAllPosts(state.posts.all, state.pagination)

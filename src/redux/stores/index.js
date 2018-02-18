@@ -1,4 +1,4 @@
-export const initialState = {
+export default {
   posts: {
     featured: [], // array of featured posts
     all: [], // array of posts

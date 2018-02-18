@@ -1,4 +1,4 @@
-import initialState from "../store"
+import initialState from "../stores"
 
 import {
   GET_FEATURED_POSTS,
