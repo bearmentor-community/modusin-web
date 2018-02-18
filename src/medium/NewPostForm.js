@@ -4,8 +4,8 @@ import { Form, FormGroup, Input } from "reactstrap"
 
 import ActionButton from "../small/ActionButton"
 
-const NewPostForm = props => (
-  <Form onSubmit={props.submitNewPostData}>
+const NewPostForm = ({ submitNewPostData }) => (
+  <Form onSubmit={submitNewPostData}>
     <FormGroup row>
       <Col>
         <Input

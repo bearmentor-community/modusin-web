@@ -4,9 +4,9 @@ import { default as Layout } from "../templates/LayoutSingle"
 
 import SegmentProfile from "../large/SegmentProfile"
 
-const Profile = props => {
+const Profile = ({ match }) => {
   const profile = {
-    username: props.match.params.username
+    username: match.params.username
   }
 
   return (

@@ -3,8 +3,8 @@ import { Form, FormGroup, Label, Input } from "reactstrap"
 
 import ActionButton from "../small/ActionButton"
 
-const AuthLoginForm = props => (
-  <Form className="auth form" onSubmit={props.submitLoginData}>
+const AuthLoginForm = ({ submitLoginData }) => (
+  <Form className="auth form" onSubmit={submitLoginData}>
     <FormGroup row>
       <Label for="loginEmail">Email</Label>
       <Input
