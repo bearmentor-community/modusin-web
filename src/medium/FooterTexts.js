@@ -1,9 +1,21 @@
 import React from "react"
 
-const FooterText = ({ post }) => (
-  <div>
-    <span>CONTENT</span>
-  </div>
-)
+import FooterText from "../small/FooterText"
 
-export default FooterText
+const FooterTexts = props => {
+  const links = props.links
+
+  return (
+    <footer className="footer">
+      {links.map((link, index) => {
+        return (
+          <FooterText key={index} to={link.to}>
+            {link.title}
+          </FooterText>
+        )
+      })}
+    </footer>
+  )
+}
+
+export default FooterTexts

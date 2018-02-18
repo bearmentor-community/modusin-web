@@ -5,7 +5,6 @@ import Logo from "../small/Logo"
 import SearchBox from "../small/SearchBox"
 import ActionButtons from "../medium/ActionButtons"
 import ActionAvatar from "../small/ActionAvatar"
-import DebugLinks from "../small/DebugLinks"
 
 const account = {
   name: "M Haidar Hanif",
@@ -22,9 +21,6 @@ const SegmentActionHeader = props => (
       <SearchBox />
       <ActionButtons />
       <ActionAvatar to={`/profile/${account.username}`} account={account} />
-    </Col>
-    <Col xs={10}>
-      <DebugLinks />
     </Col>
   </Row>
 )

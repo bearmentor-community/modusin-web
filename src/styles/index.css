@@ -14,12 +14,17 @@ a {
   color: black;
 }
 
-a:visited, a:hover {
+a:visited,
+a:hover {
   text-decoration: none;
   color: black;
 }
 
 /* -------------------------------------------------------------------------- */
+
+.debug {
+  color: red;
+}
 
 .logo {
   font-family: "Fira Code", monospace;
@@ -188,6 +193,8 @@ a:visited, a:hover {
   text-decoration: underline;
 }
 
+/* -------------------------------------------------------------------------- */
+
 .action.buttons {
   margin: 10px 0;
 }
@@ -216,6 +223,8 @@ a:visited, a:hover {
   height: 40px;
 }
 
+/* -------------------------------------------------------------------------- */
+
 .column.right {
   display: flex;
   justify-content: flex-end;
@@ -224,4 +233,15 @@ a:visited, a:hover {
 .search.box {
   border: 2px solid #aaa;
   padding: 4px 8px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+footer {
+  padding: 10px;
+  border-top: 2px solid #aaa;
+}
+
+.footer.text {
+  margin-right: 20px;
 }
