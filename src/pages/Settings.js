@@ -1,9 +1,11 @@
 import React from "react"
 import { default as Layout } from "../templates/LayoutSingle"
 
-const Setting = (props) => (
+import SegmentSettings from "../large/SegmentSettings"
+
+const Setting = props => (
   <Layout>
-    <h2>Setting</h2>
+    <SegmentSettings />
   </Layout>
 )
 
