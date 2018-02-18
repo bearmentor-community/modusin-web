@@ -25,7 +25,7 @@ const App = () => (
     <Route path={`/register`} component={Register} />
     <Route path={`/login`} component={Login} />
     <Route path={`/new`} component={New} />
-    {/* <Route exact path={`/profile`} component={Profile} /> */}
+    <Route exact path={`/profile`} component={Profile} />
     <Route path={`/profile/:username`} component={Profile} />
     <Route path={`/settings`} component={Settings} />
   </div>

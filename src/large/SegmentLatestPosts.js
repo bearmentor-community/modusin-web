@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import { Row, Col } from "reactstrap"
 
 import SmallPost from "../medium/SmallPost"
@@ -44,7 +45,9 @@ const POSTS = [
 const SegmentLatestPosts = props => (
   <Row id="SegmentLatestPosts" xs={8}>
     <Col xs={12}>
-      <SectionTitle>Latest posts for you</SectionTitle>
+      <Link to="/posts">
+        <SectionTitle>Latest posts for you</SectionTitle>
+      </Link>
     </Col>
     {POSTS.map((post, index) => {
       return (

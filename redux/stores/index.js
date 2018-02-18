@@ -11,7 +11,12 @@ export const initialState = {
   },
 
   profile: {
-    selected: {}
+    selected: {
+      username: "",
+      name: "",
+      bio: "",
+      posts: []
+    }
   },
 
   auth: {

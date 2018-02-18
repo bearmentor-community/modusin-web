@@ -6,10 +6,12 @@ import SearchBox from "../small/SearchBox"
 import CTAButtons from "../medium/CTAButtons"
 import CTAAvatar from "../small/CTAAvatar"
 
-const account = {
-  name: "M Haidar Hanif",
-  username: "mhaidarh",
-  image_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
+const auth = {
+  account: {
+    name: "M Haidar Hanif",
+    username: "mhaidarh",
+    image_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
+  }
 }
 
 const SegmentCTAHeader = props => (
@@ -22,7 +24,10 @@ const SegmentCTAHeader = props => (
     </Col>
     <Col xs={12} md={4} className="column right">
       <CTAButtons />
-      <CTAAvatar to={`/profile/${account.username}`} account={account} />
+      <CTAAvatar
+        to={`/profile/${auth.account.username}`}
+        account={auth.account}
+      />
     </Col>
   </Row>
 )
