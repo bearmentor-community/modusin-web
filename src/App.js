@@ -10,6 +10,7 @@ import topic from "./pages/topic"
 
 import register from "./pages/register"
 import login from "./pages/login"
+import create from "./pages/create"
 import profile from "./pages/profile"
 import setting from "./pages/setting"
 
@@ -24,6 +25,7 @@ const App = () => (
 
     <Route path={`/register`} component={register} />
     <Route path={`/login`} component={login} />
+    <Route path={`/create`} component={create} />
     <Route path={`/profile`} component={profile} />
     <Route path={`/setting`} component={setting} />
   </div>
