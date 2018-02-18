@@ -4,7 +4,13 @@ import { Form, FormGroup, Label, Input } from "reactstrap"
 import ActionButton from "../small/ActionButton"
 
 const AuthLoginForm = ({ submitLoginData }) => (
-  <Form className="auth form" onSubmit={submitLoginData}>
+  <Form
+    className="auth form"
+    onSubmit={e => {
+      e.preventDefault()
+      submitLoginData()
+    }}
+  >
     <FormGroup row>
       <Label for="loginEmail">Email</Label>
       <Input

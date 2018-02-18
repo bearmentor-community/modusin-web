@@ -28,7 +28,8 @@ a {
   color: black;
 }
 
-a:visited, a:hover {
+a:visited,
+a:hover {
   text-decoration: none;
   color: black;
 }
@@ -271,6 +272,19 @@ a:visited, a:hover {
 
 .auth.form {
   margin: 30px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.page.title {
+  font-family: sans-serif;
+  font-size: 42px;
+}
+
+.page.text {
+  font-family: serif;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 /* -------------------------------------------------------------------------- */

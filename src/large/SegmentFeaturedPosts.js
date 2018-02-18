@@ -1,4 +1,5 @@
 import React from "react"
+// import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 import { Row, Col } from "reactstrap"
 
@@ -41,7 +42,7 @@ const POSTS = [
   }
 ]
 
-const SegmentFeaturedPosts = props => (
+const SegmentFeaturedPosts = ({ posts }) => (
   <Row id="SegmentFeaturedPosts">
     <Col>
       <Link to="/posts">

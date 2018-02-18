@@ -5,7 +5,13 @@ import { Form, FormGroup, Input } from "reactstrap"
 import ActionButton from "../small/ActionButton"
 
 const NewPostForm = ({ submitNewPostData }) => (
-  <Form onSubmit={submitNewPostData}>
+  <Form
+    className="new post form"
+    onSubmit={e => {
+      e.preventDefault()
+      submitNewPostData()
+    }}
+  >
     <FormGroup row>
       <Col>
         <Input
