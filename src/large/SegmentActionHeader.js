@@ -3,8 +3,8 @@ import { Row, Col } from "reactstrap"
 
 import Logo from "../small/Logo"
 import SearchBox from "../small/SearchBox"
-import ActionButtons from "../medium/ActionButtons"
-import ActionAvatar from "../small/ActionAvatar"
+import CTAButtons from "../medium/CTAButtons"
+import CTAAvatar from "../small/CTAAvatar"
 
 const account = {
   name: "M Haidar Hanif",
@@ -12,17 +12,17 @@ const account = {
   image_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
 }
 
-const SegmentActionHeader = props => (
-  <Row id="SegmentActionHeader" className="center">
+const SegmentCTAHeader = props => (
+  <Row id="SegmentCTAHeader" className="center">
     <Col xs={12} md={2}>
       <Logo />
     </Col>
     <Col xs={12} md={10} className="column right">
       <SearchBox />
-      <ActionButtons />
-      <ActionAvatar to={`/profile/${account.username}`} account={account} />
+      <CTAButtons />
+      <CTAAvatar to={`/profile/${account.username}`} account={account} />
     </Col>
   </Row>
 )
 
-export default SegmentActionHeader
+export default SegmentCTAHeader

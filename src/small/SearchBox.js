@@ -1,7 +1,7 @@
 import React from "react"
 
 const SearchBox = props => (
-  <form className="action">
+  <form className="cta">
     <input
       className="search box"
       type="text"

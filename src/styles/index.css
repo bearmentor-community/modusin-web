@@ -24,7 +24,8 @@ a {
   color: black;
 }
 
-a:visited, a:hover {
+a:visited,
+a:hover {
   text-decoration: none;
   color: black;
 }
@@ -206,18 +207,18 @@ a:visited, a:hover {
 
 /* -------------------------------------------------------------------------- */
 
-.action.buttons {
-  margin: 10px 0;
-}
-
-.action {
+.cta {
   padding: 4px;
   margin: 6px;
   display: flex;
   align-items: center;
 }
 
-.action.button {
+.cta.buttons {
+  margin: 10px 0;
+}
+
+.cta.button {
   padding-left: 12px;
   padding-right: 12px;
   border: 2px solid navy;
@@ -228,7 +229,7 @@ a:visited, a:hover {
   background: none;
 }
 
-.action.avatar img {
+.cta.avatar img {
   border: 2px solid #333;
   border-radius: 32px;
   height: 40px;
