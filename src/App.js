@@ -11,7 +11,7 @@ import Register from "./pages/Register"
 import Login from "./pages/Login"
 import New from "./pages/New"
 import Profile from "./pages/Profile"
-import Setting from "./pages/Setting"
+import Settings from "./pages/Settings"
 
 const App = () => (
   <div id="App" className="routes">
@@ -27,7 +27,7 @@ const App = () => (
     <Route path={`/new`} component={New} />
     <Route exact path={`/profile`} component={Profile} />
     <Route path={`/profile/:username`} component={Profile} />
-    <Route path={`/setting`} component={Setting} />
+    <Route path={`/settings`} component={Settings} />
   </div>
 )
 
