@@ -8,6 +8,15 @@ body {
   font-family: sans-serif;
 }
 
+a:link, a:visited, a:hover {
+  text-decoration: none;
+}
+
+.logo-text {
+  text-align: center;
+  color: black;
+}
+
 .center {
   justify-content: center;
 }
