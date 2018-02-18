@@ -11,8 +11,12 @@ The goal of this app is to clone a [Medium](https://medium.com) web app, called 
 - Node.js
 - React.js
 - React Router
+- React Redux
 - Redux
+- Redux Thunk / Redux Saga
 - Netlify
+- CloudFlare
+- Uniregistry
 
 --------------------------------------------------------------------------------
 
