@@ -1,10 +1,10 @@
-import React from "react"
-import { Row, Col } from "reactstrap"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import React from "react";
+import { Row, Col } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
 
-import { default as Layout } from "../templates/LayoutSingle"
+import { default as Layout } from "../templates/LayoutSingle";
 
-const Create = (props) => (
+const Create = props => (
   <Layout>
     <Row className="center">
       <Col xs={10}>
@@ -16,8 +16,8 @@ const Create = (props) => (
             <Col>
               <Input
                 type="text"
-                name="post-title"
-                id="post-title"
+                name="postTitle"
+                id="postTitle"
                 placeholder="Your post title here"
               />
             </Col>
@@ -26,9 +26,10 @@ const Create = (props) => (
             <Col>
               <Input
                 type="textarea"
-                name="text"
-                id="exampleext"
+                name="postContent"
+                id="postContent"
                 placeholder="Write your post story here...."
+                rows={10}
               />
             </Col>
           </FormGroup>
@@ -41,6 +42,6 @@ const Create = (props) => (
       </Col>
     </Row>
   </Layout>
-)
+);
 
-export default Create
+export default Create;

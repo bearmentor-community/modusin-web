@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-import "../styles/ul.css"
+import "../styles/ul.css";
 
-const DebugLinks = (props) => (
+const DebugLinks = props => (
   <ul>
     <li>
       <Link to="/posts">All Posts</Link>
@@ -33,6 +33,6 @@ const DebugLinks = (props) => (
       <Link to="/setting">Setting</Link>
     </li>
   </ul>
-)
+);
 
-export default DebugLinks
+export default DebugLinks;

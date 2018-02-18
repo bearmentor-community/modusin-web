@@ -1,8 +1,8 @@
 ul li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
-ul li::after {
-  content: " |"
+ul li::before {
+  content: " / "
 }

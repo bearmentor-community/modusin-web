@@ -5,12 +5,13 @@ import { BrowserRouter as Router } from "react-router-dom"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/index.css"
+import "./styles/debug.css"
 
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
 
 // Wrap the rendering in a function:
-const render = (Component) => {
+const render = Component => {
   ReactDOM.render(
     // Wrap App inside AppContainer
     <AppContainer>
