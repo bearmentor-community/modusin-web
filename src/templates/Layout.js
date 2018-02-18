@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col } from "reactstrap"
+import { Container } from "reactstrap"
 
 import SegmentDebug from "../large/SegmentDebug"
 import SegmentMain from "../large/SegmentMain"
