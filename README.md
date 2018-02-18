@@ -4,7 +4,7 @@
 
 The goal of this app is to clone a [Medium](https://medium.com) web app, called [Modusin](https://modusin.com).
 
-![Screenshot](./screenshot.png)
+![Screenshot](./assets/screenshot.png)
 
 ## Tech Stack
 
