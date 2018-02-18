@@ -1,9 +1,9 @@
 import React from "react"
 import { default as Layout } from "../templates/LayoutDefault"
 
-const Posts = (props) => (
+const Posts = props => (
   <Layout>
-    <h2>Posts</h2>
+    <h2>All Available Posts</h2>
   </Layout>
 )
 

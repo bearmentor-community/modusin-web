@@ -24,7 +24,7 @@ const SegmentProfile = props => (
       <Col>
         <PageText>
           <Link to="/settings">
-            <ActionButton>Go to my settings</ActionButton>
+            <ActionButton>Edit My Profile</ActionButton>
           </Link>
         </PageText>
       </Col>
