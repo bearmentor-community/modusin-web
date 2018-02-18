@@ -1,23 +1,28 @@
 import React from "react"
 import { Row, Col } from "reactstrap"
 import { Link } from "react-router-dom"
+import tinydate from "tinydate"
 
 import MetaText from "../small/MetaText"
 
+const dateStamp = tinydate("{DD}-{MM}-{YYYY}")
+const postDate = dateStamp(new Date())
+
 const SmallPost = ({ post }) => (
-  <Row xs={8} className="center">
-    <Col xs={6}>
-      <Link to={`/p/${post.id}`} className="divlink">
+  <Row className="small post">
+    <Col xs={12} md={6} className="small text p-0 pr-0">
+      <Link to={`/p/${post.id}`}>
         <h3 className="small title">{post.title}</h3>
       </Link>
       <MetaText size="small">
-        by{" "}
         <Link className="meta" to={`/profile/${post.author.username}`}>
-          {post.author.name}
+          by {post.author.name}
         </Link>
       </MetaText>
+      <MetaText size="small">{postDate}</MetaText>
     </Col>
-    <Col xs={2}>
+
+    <Col xs={4} md={4}>
       <Link to={`/p/${post.id}`} className="divlink">
         <img
           className="small image"

@@ -3,6 +3,8 @@ import { Row, Col } from "reactstrap"
 
 import FeaturedPost from "../medium/FeaturedPost"
 
+import SectionTitle from "../small/SectionTitle"
+
 const POSTS = [
   {
     id: 0,
@@ -40,6 +42,9 @@ const POSTS = [
 
 const SegmentFeaturedPosts = props => (
   <Row>
+    <Col>
+      <SectionTitle>FEATURED</SectionTitle>
+    </Col>
     {POSTS.map((post, index) => {
       return (
         <Col key={index} xs={12}>

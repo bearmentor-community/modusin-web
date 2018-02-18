@@ -1,8 +1,9 @@
 ul li {
+  font-size: 10px;
   display: inline-block;
   margin-right: 5px;
 }
 
 ul li::before {
-  content: " / "
+  content: "__";
 }
