@@ -13,7 +13,7 @@ import thunk from "redux-thunk"
 // -----------------------------------------------------------------------------
 
 import reducers from "./redux/reducers"
-import { getAllPosts } from "./redux/actions"
+import { fetchAllPosts } from "./redux/actions"
 
 // -----------------------------------------------------------------------------
 
@@ -34,9 +34,13 @@ if (process.env.NODE_ENV !== "production") {
   middleware.push(createLogger())
 }
 
-const store = createStore(reducers, applyMiddleware(...middleware))
+const store = createStore(
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(...middleware)
+)
 
-store.dispatch(getAllPosts())
+store.dispatch(fetchAllPosts())
 
 // -----------------------------------------------------------------------------
 

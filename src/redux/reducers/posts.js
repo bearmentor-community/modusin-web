@@ -1,28 +1,32 @@
 import initialState from "../stores"
 
 import {
-  GET_FEATURED_POSTS,
-  GET_ALL_POSTS,
-  GET_ALL_TOPICS,
+  // GET_FEATURED_POSTS,
+  SAVE_ALL_POSTS,
+  SAVE_ALL_TOPICS,
   SELECT_POST,
   SELECT_TOPIC,
   LOADING_TRUE,
   LOADING_FALSE
+  // HANDLE_ERROR
 } from "../actions/types"
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GET_FEATURED_POSTS:
+    case SAVE_ALL_POSTS:
       return {
         ...state,
         posts: {
           all: action.payload.data
         }
       }
-    case GET_ALL_POSTS:
-      return action.payload.data
-    case GET_ALL_TOPICS:
-      return action.payload.topics
+    case SAVE_ALL_TOPICS:
+      return {
+        ...state,
+        topics: {
+          all: action.payload.data
+        }
+      }
     case SELECT_POST:
       return action.payload.data
     case SELECT_TOPIC:

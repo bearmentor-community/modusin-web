@@ -1,7 +1,11 @@
+import axios from "axios"
+
 import {
   GET_FEATURED_POSTS,
-  GET_ALL_POSTS,
-  GET_ALL_TOPICS,
+  REQUEST_ALL_POSTS,
+  SAVE_ALL_POSTS,
+  // REQUEST_ALL_TOPICS,
+  // SAVE_ALL_TOPICS,
   SELECT_POST,
   SELECT_TOPIC,
   SELECT_PROFILE,
@@ -10,9 +14,10 @@ import {
   ACCOUNT_LOGOUT,
   SET_LOGIN_TOKEN,
   SET_DECODED_ACCOUNT,
-  SUBMIT_NEW_POST,
-  LOADING_TRUE,
-  LOADING_FALSE
+  SUBMIT_NEW_POST
+  // LOADING_TRUE,
+  // LOADING_FALSE,
+  // HANDLE_ERROR
 } from "./types"
 
 // -----------------------------------------------------------------------------
@@ -22,10 +27,33 @@ export const getFeaturedPosts = payload => ({
   payload
 })
 
-export const getAllPosts = payload => ({
-  type: GET_ALL_POSTS,
+export const requestAllPosts = payload => ({
+  type: REQUEST_ALL_POSTS,
   payload
 })
+
+export const saveAllPosts = (payload, response) => ({
+  type: SAVE_ALL_POSTS,
+  payload: {
+    data: response.data,
+    received_at: Date.now()
+  }
+})
+
+export const fetchAllPosts = payload => dispatch => {
+  dispatch(requestAllPosts(payload))
+
+  return axios
+    .get(`http://localhost:3000/posts`)
+    .then(rawResponse => {
+      return rawResponse.data
+    })
+    .then(response => {
+      return dispatch(saveAllPosts(payload, response))
+    })
+}
+
+export const getAllPosts = payload => {}
 
 // -----------------------------------------------------------------------------
 
