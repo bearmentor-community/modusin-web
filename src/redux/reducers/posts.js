@@ -1,7 +1,7 @@
 import initialState from "../stores"
 
 import {
-  // GET_FEATURED_POSTS,
+  // SAVE_FEATURED_POSTS,
   SAVE_ALL_POSTS,
   SAVE_ALL_TOPICS,
   SELECT_POST,

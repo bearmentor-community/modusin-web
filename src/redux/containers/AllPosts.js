@@ -4,9 +4,11 @@ import { getAllPosts } from "../actions"
 
 import SegmentLatestPosts from "../../large/SegmentLatestPosts"
 
-const mapStateToProps = state => ({
-  posts: getAllPosts(state.posts.all, state.pagination)
-})
+const mapStateToProps = state => {
+  return {
+    dummy: postgetAllPosts(state.posts.all)
+  }
+}
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props

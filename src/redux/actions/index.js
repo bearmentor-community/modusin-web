@@ -1,10 +1,8 @@
 import axios from "axios"
 
 import {
-  GET_FEATURED_POSTS,
-  REQUEST_ALL_POSTS,
+  // GET_FEATURED_POSTS,
   SAVE_ALL_POSTS,
-  // REQUEST_ALL_TOPICS,
   // SAVE_ALL_TOPICS,
   SELECT_POST,
   SELECT_TOPIC,
@@ -22,16 +20,13 @@ import {
 
 // -----------------------------------------------------------------------------
 
-export const getFeaturedPosts = payload => ({
-  type: GET_FEATURED_POSTS,
-  payload
-})
+// what?
+// export const requestAllPosts = payload => ({
+//   type: REQUEST_ALL_POSTS,
+//   payload
+// })
 
-export const requestAllPosts = payload => ({
-  type: REQUEST_ALL_POSTS,
-  payload
-})
-
+// emmit action to save posts data into store's state
 export const saveAllPosts = (payload, response) => ({
   type: SAVE_ALL_POSTS,
   payload: {
@@ -40,9 +35,9 @@ export const saveAllPosts = (payload, response) => ({
   }
 })
 
+// fetch posts data from API
+// after finished, call SAVE_ALL_POSTS action
 export const fetchAllPosts = payload => dispatch => {
-  dispatch(requestAllPosts(payload))
-
   return axios
     .get(`http://localhost:3000/posts`)
     .then(rawResponse => {
@@ -53,7 +48,10 @@ export const fetchAllPosts = payload => dispatch => {
     })
 }
 
-export const getAllPosts = payload => {}
+// get all posts for view component's props
+export const getAllPosts = state => {
+  return state.posts.all
+}
 
 // -----------------------------------------------------------------------------
 
