@@ -260,6 +260,10 @@ a:visited, a:hover {
   padding: 4px 8px;
 }
 
+.trimmer {
+  overflow: hidden;
+}
+
 /* -------------------------------------------------------------------------- */
 
 footer {
