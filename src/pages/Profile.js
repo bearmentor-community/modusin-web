@@ -1,9 +1,12 @@
 import React from "react"
+
 import { default as Layout } from "../templates/LayoutSingle"
 
-const Profile = (props) => (
+import SegmentProfile from "../large/SegmentProfile"
+
+const Profile = props => (
   <Layout>
-    <h2>Profile</h2>
+    <SegmentProfile />
   </Layout>
 )
 

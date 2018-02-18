@@ -1,33 +1,33 @@
 import React from "react"
 import { Route } from "react-router-dom"
 
-import home from "./pages/home"
+import Home from "./pages/Home"
+import Posts from "./pages/Posts"
+import Post from "./pages/Post"
+import Topics from "./pages/Topics"
+import Topic from "./pages/Topic"
 
-import posts from "./pages/posts"
-import post from "./pages/post"
-import topics from "./pages/topics"
-import topic from "./pages/topic"
-
-import register from "./pages/register"
-import login from "./pages/login"
-import create from "./pages/create"
-import profile from "./pages/profile"
-import setting from "./pages/setting"
+import Register from "./pages/Register"
+import Login from "./pages/Login"
+import New from "./pages/New"
+import Profile from "./pages/Profile"
+import Settings from "./pages/Settings"
 
 const App = () => (
-  <div id="routes">
-    <Route exact path={`/`} component={home} />
-    <Route path={`/posts`} component={posts} />
-    <Route path={`/topics`} component={topics} />
+  <div id="App" className="routes">
+    <Route exact path={`/`} component={Home} />
+    <Route path={`/posts`} component={Posts} />
+    <Route path={`/topics`} component={Topics} />
 
-    <Route path={`/p/:id`} component={post} />
-    <Route path={`/t/:id`} component={topic} />
+    <Route path={`/p/:id`} component={Post} />
+    <Route path={`/t/:id`} component={Topic} />
 
-    <Route path={`/register`} component={register} />
-    <Route path={`/login`} component={login} />
-    <Route path={`/create`} component={create} />
-    <Route path={`/profile`} component={profile} />
-    <Route path={`/setting`} component={setting} />
+    <Route path={`/register`} component={Register} />
+    <Route path={`/login`} component={Login} />
+    <Route path={`/new`} component={New} />
+    <Route exact path={`/profile`} component={Profile} />
+    <Route path={`/profile/:username`} component={Profile} />
+    <Route path={`/settings`} component={Settings} />
   </div>
 )
 

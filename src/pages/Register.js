@@ -1,9 +1,11 @@
 import React from "react"
 import { default as Layout } from "../templates/LayoutAuth"
 
-const Register = (props) => (
+import SegmentRegister from "../large/SegmentRegister"
+
+const Register = props => (
   <Layout>
-    <h2>REGISTER</h2>
+    <SegmentRegister />
   </Layout>
 )
 

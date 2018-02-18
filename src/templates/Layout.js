@@ -1,11 +1,15 @@
 import React from "react"
-import { Container, Row, Col } from "reactstrap"
+import { Container } from "reactstrap"
 
-const Layout = (props) => (
-  <Container>
-    <Row>
-      <Col>{props.children}</Col>
-    </Row>
+import SegmentDebug from "../large/SegmentDebug"
+import SegmentMain from "../large/SegmentMain"
+import SegmentFooter from "../large/SegmentFooter"
+
+const Layout = props => (
+  <Container id="Layout">
+    <SegmentDebug active={false} />
+    <SegmentMain>{props.children}</SegmentMain>
+    <SegmentFooter />
   </Container>
 )
 

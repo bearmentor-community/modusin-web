@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/index.css"
-import "./styles/debug.css"
+// import "./styles/debug.css"
 
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"

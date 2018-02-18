@@ -2,11 +2,7 @@ import React from "react"
 import { Nav } from "reactstrap"
 
 import NavLink from "../small/NavLink"
-
-const style = {
-  display: "flex",
-  justifyContent: "center"
-}
+import TopicText from "../small/TopicText"
 
 const TOPICS = [
   {
@@ -31,12 +27,12 @@ const TOPICS = [
   }
 ]
 
-const TopicTags = (props) => (
-  <Nav style={style}>
+const TopicTags = props => (
+  <Nav className="center nav-topics trimmer">
     {TOPICS.map((topic, index) => {
       return (
         <NavLink key={index} to={topic.path}>
-          {topic.title}
+          <TopicText>{topic.title}</TopicText>
         </NavLink>
       )
     })}

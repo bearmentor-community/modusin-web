@@ -3,6 +3,8 @@ import { Row, Col } from "reactstrap"
 
 import SmallPost from "../medium/SmallPost"
 
+import SectionTitle from "../small/SectionTitle"
+
 const POSTS = [
   {
     id: 10,
@@ -39,18 +41,19 @@ const POSTS = [
   }
 ]
 
-const SegmentLatestPosts = (props) => (
-  <div>
+const SegmentLatestPosts = props => (
+  <Row id="SegmentLatestPosts" xs={8}>
+    <Col xs={12}>
+      <SectionTitle>Latest posts for you</SectionTitle>
+    </Col>
     {POSTS.map((post, index) => {
       return (
-        <Row key={index}>
-          <Col>
-            <SmallPost post={post} />
-          </Col>
-        </Row>
+        <Col key={index} xs={12} md={8} lg={6}>
+          <SmallPost post={post} />
+        </Col>
       )
     })}
-  </div>
+  </Row>
 )
 
 export default SegmentLatestPosts
