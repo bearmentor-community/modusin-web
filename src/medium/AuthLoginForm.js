@@ -1,20 +1,11 @@
 import React from "react"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import { Form, FormGroup, Label, Input } from "reactstrap"
 
 import ActionButton from "../small/ActionButton"
 
 const AuthLoginForm = props => (
   <Form>
-    <FormGroup>
-      <Label for="loginName">Name</Label>
-      <Input
-        id="loginName"
-        name="loginName"
-        placeholder="Your Full Name"
-        type="text"
-      />
-    </FormGroup>
-    <FormGroup>
+    <FormGroup row>
       <Label for="loginEmail">Email</Label>
       <Input
         id="loginEmail"
@@ -23,7 +14,7 @@ const AuthLoginForm = props => (
         type="email"
       />
     </FormGroup>
-    <FormGroup>
+    <FormGroup row>
       <Label for="loginPassword">Password</Label>
       <Input
         id="loginPassword"
@@ -32,7 +23,9 @@ const AuthLoginForm = props => (
         type="password"
       />
     </FormGroup>
-    <Button color="primary">Login to my account</Button>
+    <FormGroup row>
+      <ActionButton>Login to my account</ActionButton>
+    </FormGroup>
   </Form>
 )
 

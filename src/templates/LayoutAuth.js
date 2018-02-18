@@ -1,11 +1,11 @@
 import React from "react"
 import Layout from "./Layout"
 
-import SegmentActionHeader from "../large/SegmentActionHeader"
+import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
 const LayoutAuth = props => (
   <Layout>
-    <SegmentActionHeader />
+    <SegmentCTAHeader />
     {props.children}
   </Layout>
 )

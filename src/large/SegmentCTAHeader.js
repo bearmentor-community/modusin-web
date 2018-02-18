@@ -14,11 +14,13 @@ const account = {
 
 const SegmentCTAHeader = props => (
   <Row id="SegmentCTAHeader" className="center">
-    <Col xs={12} md={2}>
+    <Col xs={8} md={5}>
       <Logo />
     </Col>
-    <Col xs={12} md={10} className="column right">
+    <Col xs={4} md={3} className="column right">
       <SearchBox />
+    </Col>
+    <Col xs={12} md={4} className="column right">
       <CTAButtons />
       <CTAAvatar to={`/profile/${account.username}`} account={account} />
     </Col>

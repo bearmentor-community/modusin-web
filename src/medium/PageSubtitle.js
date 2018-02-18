@@ -1,9 +1,5 @@
 import React from "react"
 
-const PageSubtitle = ({ post }) => (
-  <div>
-    <span>CONTENT</span>
-  </div>
-)
+const PageSubtitle = props => <h4>{props.children}</h4>
 
 export default PageSubtitle

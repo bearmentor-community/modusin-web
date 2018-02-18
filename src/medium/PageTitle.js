@@ -1,9 +1,5 @@
 import React from "react"
 
-const PageText = ({ post }) => (
-  <div>
-    <span>CONTENT</span>
-  </div>
-)
+const PageTitle = props => <h3>{props.children}</h3>
 
-export default PageText
+export default PageTitle

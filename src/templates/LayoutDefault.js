@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "./Layout"
 
-import SegmentActionHeader from "../large/SegmentActionHeader"
+import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
 import TopicTags from "../medium/TopicTags"
 
 const LayoutDefault = props => (
   <Layout>
-    <SegmentActionHeader />
+    <SegmentCTAHeader />
     <TopicTags />
     {props.children}
   </Layout>

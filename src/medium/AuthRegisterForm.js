@@ -1,11 +1,11 @@
 import React from "react"
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap"
+import { Form, FormGroup, Label, Input } from "reactstrap"
 
 import ActionButton from "../small/ActionButton"
 
 const AuthRegisterForm = props => (
   <Form>
-    <FormGroup>
+    <FormGroup row>
       <Label for="registerName">Name</Label>
       <Input
         id="registerName"
@@ -14,7 +14,7 @@ const AuthRegisterForm = props => (
         type="text"
       />
     </FormGroup>
-    <FormGroup>
+    <FormGroup row>
       <Label for="registerEmail">Email</Label>
       <Input
         id="registerEmail"
@@ -23,7 +23,7 @@ const AuthRegisterForm = props => (
         type="email"
       />
     </FormGroup>
-    <FormGroup>
+    <FormGroup row>
       <Label for="registerPassword">Password</Label>
       <Input
         id="registerPassword"
@@ -32,7 +32,9 @@ const AuthRegisterForm = props => (
         type="password"
       />
     </FormGroup>
-    <Button color="success">Register for new account</Button>
+    <FormGroup row>
+      <ActionButton>Register for new account</ActionButton>
+    </FormGroup>
   </Form>
 )
 

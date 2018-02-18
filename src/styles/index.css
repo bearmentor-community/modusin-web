@@ -24,8 +24,7 @@ a {
   color: black;
 }
 
-a:visited,
-a:hover {
+a:visited, a:hover {
   text-decoration: none;
   color: black;
 }
@@ -233,6 +232,20 @@ a:hover {
   border: 2px solid #333;
   border-radius: 32px;
   height: 40px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.action.button {
+  background: navy;
+  color: #fff;
+  border: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 10px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 /* -------------------------------------------------------------------------- */
