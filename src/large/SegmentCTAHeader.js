@@ -15,8 +15,8 @@ const auth = {
   }
 }
 
-const SegmentCTAHeader = props => (
-  <Row id="SegmentCTAHeader" className="center">
+const SegmentCTAHeader = ({ className }) => (
+  <Row id="SegmentCTAHeader" className={`center ${className}`}>
     <Col xs={8} md={5}>
       <Logo />
     </Col>

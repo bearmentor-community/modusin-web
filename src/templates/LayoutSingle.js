@@ -5,7 +5,7 @@ import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
 const LayoutDefault = ({ children }) => (
   <Layout>
-    <SegmentCTAHeader />
+    <SegmentCTAHeader className="post header" />
     <div className="single layout">{children}</div>
   </Layout>
 )
