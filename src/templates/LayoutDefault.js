@@ -5,11 +5,11 @@ import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
 import TopicTags from "../medium/TopicTags"
 
-const LayoutDefault = props => (
+const LayoutDefault = ({ children }) => (
   <Layout>
     <SegmentCTAHeader />
     <TopicTags />
-    <div className="default layout">{props.children}</div>
+    <div className="default layout">{children}</div>
   </Layout>
 )
 

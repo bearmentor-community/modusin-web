@@ -3,10 +3,10 @@ import Layout from "./Layout"
 
 import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
-const LayoutDefault = props => (
+const LayoutDefault = ({ children }) => (
   <Layout>
     <SegmentCTAHeader />
-    <div className="single layout">{props.children}</div>
+    <div className="single layout">{children}</div>
   </Layout>
 )
 

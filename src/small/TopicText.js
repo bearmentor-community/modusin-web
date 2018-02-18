@@ -1,7 +1,7 @@
 import React from "react"
 
-const TopicText = props => (
-  <span className="bold uppercase">{props.children}</span>
+const TopicText = ({ children }) => (
+  <span className="bold uppercase">{children}</span>
 )
 
 export default TopicText

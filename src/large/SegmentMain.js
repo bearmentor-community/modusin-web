@@ -1,6 +1,6 @@
 import React from "react"
 import { Col } from "reactstrap"
 
-const SegmentMain = props => <Col id="SegmentMain">{props.children}</Col>
+const SegmentMain = ({ children }) => <Col id="SegmentMain">{children}</Col>
 
 export default SegmentMain

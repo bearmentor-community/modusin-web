@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const CTAButton = props => (
-  <Link to={props.to}>
-    <button className="cta button">{props.children}</button>
-  </Link>
-)
+const CTAButton = ({ to, children }) => {
+  return (
+    <Link to={to}>
+      <button className="cta button">{children}</button>
+    </Link>
+  )
+}
 
 export default CTAButton
