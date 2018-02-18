@@ -1,47 +1,13 @@
-import React from "react";
-import { Row, Col } from "reactstrap";
-import { Button, Form, FormGroup, Input } from "reactstrap";
+import React from "react"
 
-import { default as Layout } from "../templates/LayoutSingle";
+import { default as Layout } from "../templates/LayoutSingle"
+
+import SegmentCreatePost from "../large/SegmentCreatePost"
 
 const Create = props => (
   <Layout>
-    <Row className="center">
-      <Col xs={10}>
-        <h3>Create New Post</h3>
-      </Col>
-      <Col xs={10}>
-        <Form>
-          <FormGroup row>
-            <Col>
-              <Input
-                type="text"
-                name="postTitle"
-                id="postTitle"
-                placeholder="Your post title here"
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Col>
-              <Input
-                type="textarea"
-                name="postContent"
-                id="postContent"
-                placeholder="Write your post story here...."
-                rows={10}
-              />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Col>
-              <Button>Save Post</Button>
-            </Col>
-          </FormGroup>
-        </Form>
-      </Col>
-    </Row>
+    <SegmentCreatePost />
   </Layout>
-);
+)
 
-export default Create;
+export default Create
