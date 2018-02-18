@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "./Layout"
 
-const LayoutAuth = (props) => (
+import ActionBar from "../medium/ActionBar"
+
+const LayoutAuth = props => (
   <Layout>
-    <h2>AUTH</h2>
+    <ActionBar />
     {props.children}
   </Layout>
 )

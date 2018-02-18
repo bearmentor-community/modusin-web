@@ -1,11 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { NavLink } from "reactstrap"
 
-const CustomNavLink = (props) => (
-  <NavLink>
+const CustomNavLink = props => (
+  <span className="nav-link">
     <Link to={props.to}>{props.children}</Link>
-  </NavLink>
+  </span>
 )
 
 export default CustomNavLink

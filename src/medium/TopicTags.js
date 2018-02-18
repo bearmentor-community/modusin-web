@@ -31,12 +31,12 @@ const TOPICS = [
   }
 ]
 
-const TopicTags = (props) => (
+const TopicTags = props => (
   <Nav style={style}>
     {TOPICS.map((topic, index) => {
       return (
         <NavLink key={index} to={topic.path}>
-          {topic.title}
+          <span className="bold uppercase">{topic.title}</span>
         </NavLink>
       )
     })}
