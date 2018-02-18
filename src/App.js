@@ -26,7 +26,8 @@ const App = () => (
     <Route path={`/register`} component={register} />
     <Route path={`/login`} component={login} />
     <Route path={`/create`} component={create} />
-    <Route path={`/profile`} component={profile} />
+    <Route exact path={`/profile`} component={profile} />
+    <Route path={`/profile/:username`} component={profile} />
     <Route path={`/setting`} component={setting} />
   </div>
 )

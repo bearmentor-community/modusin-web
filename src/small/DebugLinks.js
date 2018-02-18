@@ -17,12 +17,6 @@ const DebugLinks = props => (
     <li>
       <Link to="/t/1">Topic with id: 1</Link>
     </li>
-    <li>
-      <Link to="/profile">Profile</Link>
-    </li>
-    <li>
-      <Link to="/setting">Setting</Link>
-    </li>
   </ul>
 )
 
