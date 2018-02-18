@@ -11,7 +11,7 @@ import ActionButton from "../small/ActionButton"
 
 const SegmentProfile = ({ profile }) => {
   return (
-    <Row id="SegmentProfile" className="center text-center">
+    <Row id="SegmentProfile" className="center">
       <div>
         <Col>
           <Link to={`/profile/${profile.username}`}>
@@ -24,11 +24,9 @@ const SegmentProfile = ({ profile }) => {
           <PageSubtitle>"list of posts"</PageSubtitle>
         </Col>
         <Col>
-          <PageText>
-            <Link to="/settings">
-              <ActionButton>Edit My Profile</ActionButton>
-            </Link>
-          </PageText>
+          <Link to="/settings">
+            <ActionButton>Edit My Profile</ActionButton>
+          </Link>
         </Col>
       </div>
     </Row>
