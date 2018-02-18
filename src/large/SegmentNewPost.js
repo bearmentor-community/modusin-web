@@ -28,7 +28,7 @@ const SegmentNewPost = props => (
               name="postContent"
               id="postContent"
               placeholder="Write your post story here...."
-              rows={15}
+              rows={12}
             />
           </Col>
         </FormGroup>

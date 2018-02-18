@@ -9,7 +9,7 @@ const LayoutDefault = props => (
   <Layout>
     <SegmentCTAHeader />
     <TopicTags />
-    {props.children}
+    <div className="default layout">{props.children}</div>
   </Layout>
 )
 

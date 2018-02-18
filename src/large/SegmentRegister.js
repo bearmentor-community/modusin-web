@@ -9,7 +9,7 @@ import PageText from "../medium/PageText"
 import AuthRegisterForm from "../medium/AuthRegisterForm"
 
 const SegmentRegister = props => (
-  <Row id="SegmentRegister" className="center">
+  <Row id="SegmentRegister" className="center text-center">
     <div>
       <Col>
         <PageTitle>Join Modusin</PageTitle>
@@ -22,8 +22,10 @@ const SegmentRegister = props => (
       </Col>
       <Col>
         <PageText>
-          Already have an account?
-          <Link to="/login">Login here</Link>
+          Already have an account?{" "}
+          <Link to="/login" className="bold">
+            Login here
+          </Link>
         </PageText>
       </Col>
     </div>

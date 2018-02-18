@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input } from "reactstrap"
 import ActionButton from "../small/ActionButton"
 
 const AuthLoginForm = props => (
-  <Form>
+  <Form className="auth form">
     <FormGroup row>
       <Label for="loginEmail">Email</Label>
       <Input

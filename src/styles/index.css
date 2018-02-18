@@ -18,13 +18,18 @@ body {
   flex: 1;
 }
 
+.layout {
+  margin-top: 30px;
+}
+
 /* -------------------------------------------------------------------------- */
 
 a {
   color: black;
 }
 
-a:visited, a:hover {
+a:visited,
+a:hover {
   text-decoration: none;
   color: black;
 }
@@ -246,6 +251,8 @@ a:visited, a:hover {
   padding: 10px;
   padding-left: 12px;
   padding-right: 12px;
+  width: 100%;
+  max-width: 600px;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -262,6 +269,10 @@ a:visited, a:hover {
 
 .trimmer {
   overflow: hidden;
+}
+
+.auth.form {
+  margin: 30px 0;
 }
 
 /* -------------------------------------------------------------------------- */

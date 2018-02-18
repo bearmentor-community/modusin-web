@@ -9,7 +9,7 @@ import PageText from "../medium/PageText"
 import AuthLoginForm from "../medium/AuthLoginForm"
 
 const SegmentLogin = props => (
-  <Row id="SegmentLogin" className="center" xs={12} md={8}>
+  <Row id="SegmentLogin" className="center text-center" xs={12} md={8}>
     <div>
       <Col xs={12}>
         <PageTitle>Welcome Back</PageTitle>
@@ -22,8 +22,10 @@ const SegmentLogin = props => (
       </Col>
       <Col xs={12}>
         <PageText>
-          No account?
-          <Link to="/register">Create an account</Link>
+          No account?{" "}
+          <Link to="/register" className="bold">
+            Create an account
+          </Link>
         </PageText>
       </Col>
     </div>
