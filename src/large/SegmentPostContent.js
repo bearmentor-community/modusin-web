@@ -1,7 +1,7 @@
 import React from "react"
 
 const SegmentPostContent = ({ post }) => (
-  <div>
+  <div id="SegmentPostContent">
     <span>CONTENT</span>
   </div>
 )

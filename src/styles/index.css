@@ -8,14 +8,23 @@ body {
   font-family: sans-serif;
 }
 
+#Layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+#SegmentContents {
+  flex: 1;
+}
+
 /* -------------------------------------------------------------------------- */
 
 a {
   color: black;
 }
 
-a:visited,
-a:hover {
+a:visited, a:hover {
   text-decoration: none;
   color: black;
 }

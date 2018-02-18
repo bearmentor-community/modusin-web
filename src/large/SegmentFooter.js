@@ -16,7 +16,7 @@ const LINKS = [
 
 const SegmentFooter = props => {
   return (
-    <Row className="center">
+    <Row id="SegmentFooter">
       <Col xs={12}>
         <FooterTexts links={LINKS} />
       </Col>

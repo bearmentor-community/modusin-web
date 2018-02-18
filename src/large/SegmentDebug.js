@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 
 import "../styles/ul.css"
 
-const DebugLinks = props => (
-  <div className="debug">
+const SegmentDebug = props => (
+  <div id="SegmentDebug" className="debug">
     <ul>
       <li>
         <Link to="/posts">All Posts</Link>
@@ -22,4 +22,4 @@ const DebugLinks = props => (
   </div>
 )
 
-export default DebugLinks
+export default SegmentDebug

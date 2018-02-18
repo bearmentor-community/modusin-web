@@ -42,7 +42,7 @@ const POSTS = [
 ]
 
 const SegmentLatestPosts = props => (
-  <Row xs={8}>
+  <Row id="SegmentLatestPosts" xs={8}>
     <Col xs={12}>
       <SectionTitle>Latest posts for you</SectionTitle>
     </Col>

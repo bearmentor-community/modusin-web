@@ -13,7 +13,7 @@ const account = {
 }
 
 const SegmentActionHeader = props => (
-  <Row className="center">
+  <Row id="SegmentActionHeader" className="center">
     <Col xs={12} md={2}>
       <Logo />
     </Col>

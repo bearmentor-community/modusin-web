@@ -5,7 +5,7 @@ import { Button, Form, FormGroup, Input } from "reactstrap"
 import SectionTitle from "../small/SectionTitle"
 
 const SegmentCreatePost = props => (
-  <Row className="center">
+  <Row id="SegmentCreatePost" className="center">
     <Col xs={12} md={8}>
       <SectionTitle>WRITE NEW POST</SectionTitle>
     </Col>

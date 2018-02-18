@@ -41,7 +41,7 @@ const POSTS = [
 ]
 
 const SegmentFeaturedPosts = props => (
-  <Row>
+  <Row id="SegmentFeaturedPosts">
     <Col>
       <SectionTitle>FEATURED</SectionTitle>
     </Col>

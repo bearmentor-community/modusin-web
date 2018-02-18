@@ -15,7 +15,7 @@ import profile from "./pages/profile"
 import setting from "./pages/setting"
 
 const App = () => (
-  <div id="routes">
+  <div id="App" className="routes">
     <Route exact path={`/`} component={home} />
     <Route path={`/posts`} component={posts} />
     <Route path={`/topics`} component={topics} />
