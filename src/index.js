@@ -3,25 +3,59 @@ import ReactDOM from "react-dom"
 import { AppContainer } from "react-hot-loader"
 import { BrowserRouter as Router } from "react-router-dom"
 
+// -----------------------------------------------------------------------------
+
+import { createStore, applyMiddleware } from "redux"
+import { Provider } from "react-redux"
+import { createLogger } from "redux-logger"
+import thunk from "redux-thunk"
+
+// -----------------------------------------------------------------------------
+
+import reducers from "../redux/reducers"
+import { getAllPosts } from "../redux/actions"
+
+// -----------------------------------------------------------------------------
+
+import App from "./App"
+import registerServiceWorker from "./registerServiceWorker"
+
+// -----------------------------------------------------------------------------
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles/index.css"
 // import "./styles/debug.css"
 
-import App from "./App"
-import registerServiceWorker from "./registerServiceWorker"
+// -----------------------------------------------------------------------------
+
+const middleware = [thunk]
+
+if (process.env.NODE_ENV !== "production") {
+  middleware.push(createLogger())
+}
+
+const store = createStore(reducers, applyMiddleware(...middleware))
+
+store.dispatch(getAllPosts())
+
+// -----------------------------------------------------------------------------
 
 // Wrap the rendering in a function:
 const render = Component => {
   ReactDOM.render(
     // Wrap App inside AppContainer
     <AppContainer>
-      <Router>
-        <App />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
     </AppContainer>,
     document.getElementById("root")
   )
 }
+
+// -----------------------------------------------------------------------------
 
 // Do this once
 registerServiceWorker()
@@ -35,3 +69,5 @@ if (module.hot) {
     render(App)
   })
 }
+
+// -----------------------------------------------------------------------------

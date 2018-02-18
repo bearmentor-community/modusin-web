@@ -1,6 +1,6 @@
 export const GET_FEATURED_POSTS = `GET_FEATURED_POSTS`
-export const GET_POSTS = `GET_POSTS`
-export const GET_TOPICS = `GET_TOPICS`
+export const GET_ALL_POSTS = `GET_ALL_POSTS`
+export const GET_ALL_TOPICS = `GET_ALL_TOPICS`
 
 export const SELECT_POST = `SELECT_POST`
 export const SELECT_TOPIC = `SELECT_TOPIC`

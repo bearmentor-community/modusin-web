@@ -1,7 +1,7 @@
 import {
   GET_FEATURED_POSTS,
-  GET_POSTS,
-  GET_TOPICS,
+  GET_ALL_POSTS,
+  GET_ALL_TOPICS,
   SELECT_POST,
   SELECT_TOPIC,
   SELECT_PROFILE,
@@ -22,13 +22,8 @@ export const getFeaturedPosts = payload => ({
   payload
 })
 
-export const getPosts = payload => ({
-  type: GET_POSTS,
-  payload
-})
-
-export const getTopics = payload => ({
-  type: GET_TOPICS,
+export const getAllPosts = payload => ({
+  type: GET_ALL_POSTS,
   payload
 })
 
