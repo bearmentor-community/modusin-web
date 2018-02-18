@@ -3,7 +3,7 @@ import { default as Layout } from "../templates/LayoutDefault"
 
 const Topic = (props) => (
   <Layout>
-    <h2>{props.match.params.id}</h2>
+    <h2>Topic about {props.match.params.id}</h2>
   </Layout>
 )
 
