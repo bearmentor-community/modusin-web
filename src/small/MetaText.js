@@ -1,11 +1,17 @@
 import React from "react"
 
-const MetaText = ({ post }) => (
-  <div>
-    <h3>{post.title}</h3>
-    <h4>{post.snippet}</h4>
-    <img src={post.image.url} alt={post.image.title} />
-  </div>
-)
+const MetaText = props => {
+  const size = props.size
+
+  return size === "small" ? (
+    <span className="small meta">{props.children}</span>
+  ) : size === "medium" ? (
+    <span className="medium meta">{props.children}</span>
+  ) : size === "large" ? (
+    <span className="large meta">{props.children}</span>
+  ) : (
+    <span className="meta">{props.children}</span>
+  )
+}
 
 export default MetaText

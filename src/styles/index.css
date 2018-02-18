@@ -8,9 +8,19 @@ body {
   font-family: sans-serif;
 }
 
-a:link, a:visited, a:hover {
-  text-decoration: none;
+/* -------------------------------------------------------------------------- */
+
+a {
+  color: black;
 }
+
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/* -------------------------------------------------------------------------- */
 
 .logo-text {
   text-align: center;
@@ -27,4 +37,74 @@ a:link, a:visited, a:hover {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.image {
+  height: auto;
+}
+
+.large.image {
+  height: 300px;
+}
+
+.medium.image {
+  height: 250px;
+}
+
+.small.image {
+  height: 200px;
+}
+
+.featured.image {
+  height: 300px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.title {
+  font-weight: bold;
+}
+
+.large.title {
+  margin: 20px 0;
+  font-size: 36px;
+}
+
+.medium.title {
+  margin: 20px 0;
+  font-size: 30px;
+}
+
+.small.title {
+  margin: 20px 0;
+  font-size: 24px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.snippet {
+  color: gray;
+}
+
+.large.snippet {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.medium.snippet {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+.small.snippet {
+  margin: 2px 0;
+  font-size: 10px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.meta {
+  color: gray;
 }

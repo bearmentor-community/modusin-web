@@ -1,5 +1,4 @@
 import React from "react"
-import { Row, Col } from "reactstrap"
 
 import SmallPost from "../medium/SmallPost"
 
@@ -39,16 +38,10 @@ const POSTS = [
   }
 ]
 
-const SegmentLatestPosts = (props) => (
+const SegmentLatestPosts = props => (
   <div>
     {POSTS.map((post, index) => {
-      return (
-        <Row key={index}>
-          <Col>
-            <SmallPost post={post} />
-          </Col>
-        </Row>
-      )
+      return <SmallPost key={index} post={post} />
     })}
   </div>
 )

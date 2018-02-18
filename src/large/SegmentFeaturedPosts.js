@@ -9,13 +9,15 @@ const POSTS = [
     title: "Hello Branding World",
     content:
       "The world of branding is changing very much faster than we predicted",
-    snippet: "The world of branding is changing...",
+    snippet:
+      "The world of branding is changing very much faster than we predicted...",
     image: {
       title: "Branding Bike",
       url: "http://localhost:3000/images/posts/branding-bike.png"
     },
     author: {
       name: "M Haidar Hanif",
+      username: "mhaidarh",
       avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
     }
   },
@@ -23,23 +25,24 @@ const POSTS = [
     id: 1,
     title: "Super Human",
     content: "Human is revolutionizing very much faster than we predicted",
-    snippet: "Human is revolutionizing...",
+    snippet: "Human is revolutionizing very much faster than we predicted...",
     image: {
       title: "Leadership",
       url: "http://localhost:3000/images/posts/leadership-stage.jpg"
     },
     author: {
       name: "Superman",
+      username: "superman",
       avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
     }
   }
 ]
 
-const SegmentFeaturedPosts = (props) => (
+const SegmentFeaturedPosts = props => (
   <Row>
     {POSTS.map((post, index) => {
       return (
-        <Col key={index}>
+        <Col key={index} xs={12}>
           <FeaturedPost post={post} />
         </Col>
       )
