@@ -1,8 +1,9 @@
 import React from "react"
 import { Row, Col } from "reactstrap"
-import { Button, Form, FormGroup, Input } from "reactstrap"
+import { Form, FormGroup, Input } from "reactstrap"
 
 import SectionTitle from "../small/SectionTitle"
+import ActionButton from "../small/ActionButton"
 
 const SegmentNewPost = props => (
   <Row id="SegmentNewPost" className="center">
@@ -34,7 +35,7 @@ const SegmentNewPost = props => (
         </FormGroup>
         <FormGroup row>
           <Col>
-            <Button>Save Post</Button>
+            <ActionButton>Save Post</ActionButton>
           </Col>
         </FormGroup>
       </Form>
