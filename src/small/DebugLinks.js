@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
-import "../styles/ul.css";
+import "../styles/ul.css"
 
 const DebugLinks = props => (
   <ul>
@@ -18,21 +18,12 @@ const DebugLinks = props => (
       <Link to="/t/1">Topic with id: 1</Link>
     </li>
     <li>
-      <Link to="/register">Register</Link>
-    </li>
-    <li>
-      <Link to="/login">Login</Link>
-    </li>
-    <li>
-      <Link to="/create">Create Post</Link>
-    </li>
-    <li>
       <Link to="/profile">Profile</Link>
     </li>
     <li>
       <Link to="/setting">Setting</Link>
     </li>
   </ul>
-);
+)
 
-export default DebugLinks;
+export default DebugLinks

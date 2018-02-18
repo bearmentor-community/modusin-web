@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "./Layout"
 
-import ActionBar from "../medium/ActionBar"
+import SegmentActionHeader from "../large/SegmentActionHeader"
+
 import TopicTags from "../medium/TopicTags"
 
-const LayoutDefault = (props) => (
+const LayoutDefault = props => (
   <Layout>
-    <ActionBar />
+    <SegmentActionHeader />
     <TopicTags />
     {props.children}
   </Layout>
