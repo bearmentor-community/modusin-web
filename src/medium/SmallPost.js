@@ -14,7 +14,7 @@ const SmallPost = ({ post }) => (
       <Link to={`/p/${post.id}`}>
         <h3 className="small title">{post.title}</h3>
       </Link>
-      <MetaText size="small">
+      <MetaText size="medium">
         <Link className="meta" to={`/profile/${post.author.username}`}>
           by {post.author.name}
         </Link>

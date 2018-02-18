@@ -14,7 +14,7 @@ body {
   flex-direction: column;
 }
 
-#SegmentContents {
+#SegmentMain {
   flex: 1;
 }
 
@@ -157,7 +157,7 @@ a:visited, a:hover {
 /* -------------------------------------------------------------------------- */
 
 .snippet {
-  color: gray;
+  color: #555;
 }
 
 .large.snippet {
@@ -179,19 +179,21 @@ a:visited, a:hover {
 
 .meta {
   display: block;
-  color: gray;
   margin: 2px 0;
 }
 
 .large.meta {
+  color: #333;
   font-size: 18px;
 }
 
 .medium.meta {
+  color: #888;
   font-size: 16px;
 }
 
 .small.meta {
+  color: #aaa;
   font-size: 14px;
 }
 
