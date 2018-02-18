@@ -1,9 +1,11 @@
 import React from "react"
 import Layout from "./Layout"
 
+import ActionBar from "../medium/ActionBar"
+
 const LayoutDefault = (props) => (
   <Layout>
-    <h1>LOGO</h1>
+    <ActionBar />
     {props.children}
   </Layout>
 )

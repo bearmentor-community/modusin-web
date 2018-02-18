@@ -3,7 +3,7 @@ import { default as Layout } from "../templates/LayoutSingle"
 
 const Post = (props) => (
   <Layout>
-    <h2>Single Post</h2>
+    <h2>Post id: {props.match.params.id}</h2>
   </Layout>
 )
 
