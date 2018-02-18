@@ -2,11 +2,11 @@ import React from "react"
 
 import { default as Layout } from "../templates/LayoutSingle"
 
-import SegmentCreatePost from "../large/SegmentCreatePost"
+import SegmentNewPost from "../large/SegmentNewPost"
 
 const Create = props => (
   <Layout>
-    <SegmentCreatePost />
+    <SegmentNewPost />
   </Layout>
 )
 

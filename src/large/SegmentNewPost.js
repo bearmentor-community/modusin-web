@@ -4,10 +4,10 @@ import { Button, Form, FormGroup, Input } from "reactstrap"
 
 import SectionTitle from "../small/SectionTitle"
 
-const SegmentCreatePost = props => (
-  <Row id="SegmentCreatePost" className="center">
+const SegmentNewPost = props => (
+  <Row id="SegmentNewPost" className="center">
     <Col xs={12} md={8}>
-      <SectionTitle>WRITE NEW POST</SectionTitle>
+      <SectionTitle>Write New Post</SectionTitle>
     </Col>
     <Col xs={12} md={8}>
       <Form>
@@ -42,4 +42,4 @@ const SegmentCreatePost = props => (
   </Row>
 )
 
-export default SegmentCreatePost
+export default SegmentNewPost
