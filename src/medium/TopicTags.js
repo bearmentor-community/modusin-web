@@ -2,6 +2,7 @@ import React from "react"
 import { Nav } from "reactstrap"
 
 import NavLink from "../small/NavLink"
+import Topic from "../small/Topic"
 
 const style = {
   display: "flex",
@@ -36,7 +37,7 @@ const TopicTags = props => (
     {TOPICS.map((topic, index) => {
       return (
         <NavLink key={index} to={topic.path}>
-          <span className="bold uppercase">{topic.title}</span>
+          <Topic>{topic.title}</Topic>
         </NavLink>
       )
     })}

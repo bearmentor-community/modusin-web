@@ -8,7 +8,7 @@ const style = {
   color: "black"
 }
 
-const Logo = (props) => (
+const Logo = props => (
   <Link to="/" style={style}>
     <h1>Modusin</h1>
   </Link>
