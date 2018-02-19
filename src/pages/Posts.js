@@ -5,7 +5,6 @@ import ConnectedLatestPosts from "../redux/containers/ConnectedLatestPosts"
 
 const Posts = props => (
   <Layout>
-    <h2>All Available Posts</h2>
     <ConnectedLatestPosts />
   </Layout>
 )

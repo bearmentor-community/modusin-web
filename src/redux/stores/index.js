@@ -1,7 +1,45 @@
 export const posts = {
   store: "POSTS",
   featured: [], // array of featured posts
-  all: [], // array of posts
+  all: [
+    // array of dummy posts
+    {
+      id: 1,
+      title: "One One One",
+      image: {
+        title: "Abstract",
+        url: "http://localhost:3000/images/posts/abstract.jpg"
+      },
+      creator: {
+        username: "one",
+        name: "One Punch Man"
+      }
+    },
+    {
+      id: 2,
+      title: "Two Two Two",
+      image: {
+        title: "Abstract",
+        url: "http://localhost:3000/images/posts/abstract.jpg"
+      },
+      creator: {
+        username: "two",
+        name: "Two Times"
+      }
+    },
+    {
+      id: 3,
+      title: "Three Three Three",
+      image: {
+        title: "Abstract",
+        url: "http://localhost:3000/images/posts/abstract.jpg"
+      },
+      creator: {
+        username: "three",
+        name: "Three Tree"
+      }
+    }
+  ],
   selected: {}
 }
 

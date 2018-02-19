@@ -19,11 +19,11 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props
-const AllPosts = connect(
+const ConnectedLatestPosts = connect(
   // Given Redux state, return props
   mapStateToProps,
   // Given Redux dispatch, return callback props
   mapDispatchToProps
 )(SegmentLatestPosts)
 
-export default AllPosts
+export default ConnectedLatestPosts

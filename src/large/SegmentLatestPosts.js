@@ -6,47 +6,9 @@ import { Row, Col } from "reactstrap"
 import SmallPost from "../medium/SmallPost"
 import SectionTitle from "../small/SectionTitle"
 
-const POSTS = [
-  {
-    id: 10,
-    title: "One One One",
-    image: {
-      title: "Abstract",
-      url: "http://localhost:3000/images/posts/abstract.jpg"
-    },
-    creator: {
-      username: "one",
-      name: "One Punch Man"
-    }
-  },
-  {
-    id: 20,
-    title: "Two Two Two",
-    image: {
-      title: "Abstract",
-      url: "http://localhost:3000/images/posts/abstract.jpg"
-    },
-    creator: {
-      username: "two",
-      name: "Two Times"
-    }
-  },
-  {
-    id: 30,
-    title: "Three Three Three",
-    image: {
-      title: "Abstract",
-      url: "http://localhost:3000/images/posts/abstract.jpg"
-    },
-    creator: {
-      username: "three",
-      name: "Three Tree"
-    }
-  }
-]
-
-const SegmentLatestPosts = props => {
+const SegmentLatestPosts = ({ posts }) => {
   // console.log("SegmentLatestPosts.props", props)
+  console.log(posts)
 
   return (
     <Row id="SegmentLatestPosts" xs={8}>
@@ -55,7 +17,7 @@ const SegmentLatestPosts = props => {
           <SectionTitle>Latest posts for you</SectionTitle>
         </Link>
       </Col>
-      {POSTS.map((post, index) => {
+      {posts.all.map((post, index) => {
         return (
           <Col key={index} xs={12} md={8} lg={6}>
             <SmallPost post={post} />
