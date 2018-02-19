@@ -3,7 +3,7 @@ import axios from "axios"
 import {
   // GET_FEATURED_POSTS,
   SAVE_ALL_POSTS,
-  // GET_ALL_POSTS,
+  GET_ALL_POSTS,
   SAVE_ALL_TOPICS,
   GET_ALL_TOPICS,
   SELECT_POST,
@@ -31,9 +31,16 @@ export const saveAllPosts = (payload, response) => ({
   }
 })
 
+export const requestAllPosts = payload => ({
+  type: `REQUEST_ALL_POSTS`,
+  payload
+})
+
 // fetch posts data from API
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllPosts = payload => dispatch => {
+  dispatch(requestAllPosts(payload))
+
   return axios
     .get(`http://localhost:3000/posts`)
     .then(rawResponse => {
@@ -43,6 +50,11 @@ export const fetchAllPosts = payload => dispatch => {
       return dispatch(saveAllPosts(payload, response))
     })
 }
+
+export const getAllPosts = payload => ({
+  type: GET_ALL_POSTS,
+  payload
+})
 
 // -----------------------------------------------------------------------------
 // fetch = request => save
@@ -56,7 +68,7 @@ export const saveAllTopics = (payload, response) => ({
   }
 })
 
-export const requestTopics = payload => ({
+export const requestAllTopics = payload => ({
   type: `REQUEST_ALL_TOPICS`,
   payload
 })
@@ -64,7 +76,7 @@ export const requestTopics = payload => ({
 // fetch topics data from API
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllTopics = payload => dispatch => {
-  dispatch(requestTopics(payload))
+  dispatch(requestAllTopics(payload))
 
   const response = {
     data: [

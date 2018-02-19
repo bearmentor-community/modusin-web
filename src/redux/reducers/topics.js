@@ -16,8 +16,6 @@ import {
 // -----------------------------------------------------------------------------
 
 export default (state = topics, action) => {
-  console.log(`topics.reducers`, action)
-
   switch (action.type) {
     // save all topics into dedicated topics state
     case SAVE_ALL_TOPICS:

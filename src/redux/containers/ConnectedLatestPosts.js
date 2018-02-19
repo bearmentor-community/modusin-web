@@ -1,6 +1,6 @@
 import { connect } from "react-redux"
 
-import { getAllPosts } from "../reducers"
+import { getAllPosts } from "../actions"
 
 import SegmentLatestPosts from "../../large/SegmentLatestPosts"
 
