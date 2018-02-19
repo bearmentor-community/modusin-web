@@ -1,3 +1,7 @@
+/*
+  Create a new topics' state
+*/
+
 import { topics } from "../stores"
 
 import {

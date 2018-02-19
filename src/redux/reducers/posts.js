@@ -1,3 +1,7 @@
+/*
+  Create a new posts' state
+*/
+
 import { posts } from "../stores"
 
 import {

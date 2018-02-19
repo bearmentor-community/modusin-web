@@ -70,11 +70,14 @@ export const fetchAllTopics = payload => dispatch => {
   //     return dispatch(saveAllPosts(payload, response))
   //   })
 
-  const response = [
-    { title: "Technology" },
-    { title: "Design" },
-    { title: "Culture" }
-  ]
+  const response = {
+    data: [
+      { title: "Technology" },
+      { title: "Design" },
+      { title: "Culture" },
+      { title: "Art" }
+    ]
+  }
 
   return dispatch(saveAllPosts(payload, response))
 }

@@ -1,3 +1,7 @@
+/*
+  Reducers are used to create a new store's state
+*/
+
 import { combineReducers } from "redux"
 
 import posts from "./posts"
