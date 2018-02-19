@@ -8,7 +8,7 @@ export const posts = {
       title: "One One One",
       image: {
         title: "Abstract",
-        url: "http://localhost:3000/images/posts/abstract.jpg"
+        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
       },
       creator: {
         username: "one",
@@ -20,7 +20,7 @@ export const posts = {
       title: "Two Two Two",
       image: {
         title: "Abstract",
-        url: "http://localhost:3000/images/posts/abstract.jpg"
+        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
       },
       creator: {
         username: "two",
@@ -32,7 +32,7 @@ export const posts = {
       title: "Three Three Three",
       image: {
         title: "Abstract",
-        url: "http://localhost:3000/images/posts/abstract.jpg"
+        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
       },
       creator: {
         username: "three",
