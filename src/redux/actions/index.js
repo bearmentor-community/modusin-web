@@ -20,6 +20,8 @@ import {
   // HANDLE_ERROR
 } from "./types"
 
+import { topics } from "../stores"
+
 // -----------------------------------------------------------------------------
 
 // emit action to save posts data into store's state
@@ -40,7 +42,6 @@ export const requestAllPosts = payload => ({
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllPosts = payload => dispatch => {
   dispatch(requestAllPosts(payload))
-
   return axios
     .get(`http://localhost:3000/posts`)
     .then(rawResponse => {
@@ -51,9 +52,8 @@ export const fetchAllPosts = payload => dispatch => {
     })
 }
 
-export const getAllPosts = payload => ({
-  type: GET_ALL_POSTS,
-  payload
+export const getAllPosts = () => ({
+  type: GET_ALL_POSTS
 })
 
 // -----------------------------------------------------------------------------
@@ -63,7 +63,7 @@ export const getAllPosts = payload => ({
 export const saveAllTopics = (payload, response) => ({
   type: SAVE_ALL_TOPICS,
   payload: {
-    data: response.data,
+    data: response, // no need for .data as we get this from local
     received_at: Date.now()
   }
 })
@@ -77,16 +77,7 @@ export const requestAllTopics = payload => ({
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllTopics = payload => dispatch => {
   dispatch(requestAllTopics(payload))
-
-  const response = {
-    data: [
-      { title: "Technology" },
-      { title: "Design" },
-      { title: "Culture" },
-      { title: "Art" }
-    ]
-  }
-
+  const response = topics.all // initialState.topics.all
   return dispatch(saveAllTopics(payload, response))
 }
 

@@ -7,7 +7,33 @@ export const posts = {
 
 export const topics = {
   store: "TOPICS",
-  all: [], // array of topics
+  all: [
+    // array of basic topics
+    {
+      title: "All",
+      path: "/topics"
+    },
+    {
+      title: "Technology",
+      path: "/t/technology"
+    },
+    {
+      title: "Design",
+      path: "/t/design"
+    },
+    {
+      title: "Software",
+      path: "/t/software"
+    },
+    {
+      title: "Culture",
+      path: "/t/culture"
+    },
+    {
+      title: "Career",
+      path: "/t/career"
+    }
+  ],
   selected: {} // single topic
 }
 

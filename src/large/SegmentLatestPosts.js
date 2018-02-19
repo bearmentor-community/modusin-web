@@ -44,7 +44,7 @@ const POSTS = [
 ]
 
 const SegmentLatestPosts = props => {
-  console.log(props)
+  // console.log("SegmentLatestPosts.props", props)
 
   return (
     <Row id="SegmentLatestPosts" xs={8}>

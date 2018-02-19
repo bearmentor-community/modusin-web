@@ -1,15 +1,13 @@
 import { connect } from "react-redux"
 
-import { getAllPosts } from "../actions"
-
 import SegmentLatestPosts from "../../large/SegmentLatestPosts"
 
 const mapStateToProps = (state, ownProps = {}) => {
-  console.log("mapStateToProps", state)
-  console.log("ownProps", ownProps)
+  // console.log("mapStateToProps", state)
+  // console.log("ownProps", ownProps)
 
   return {
-    posts: getAllPosts(state)
+    posts: state.posts
   }
 }
 
