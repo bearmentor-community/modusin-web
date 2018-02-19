@@ -27,16 +27,20 @@ const TOPICS = [
   }
 ]
 
-const TopicTags = props => (
-  <Nav className="center nav-topics trimmer">
-    {TOPICS.map((topic, index) => {
-      return (
-        <NavLink key={index} to={topic.path}>
-          <TopicText>{topic.title}</TopicText>
-        </NavLink>
-      )
-    })}
-  </Nav>
-)
+const TopicTags = props => {
+  console.log("TopicTags.props", props)
+
+  return (
+    <Nav className="center nav-topics trimmer">
+      {TOPICS.map((topic, index) => {
+        return (
+          <NavLink key={index} to={topic.path}>
+            <TopicText>{topic.title}</TopicText>
+          </NavLink>
+        )
+      })}
+    </Nav>
+  )
+}
 
 export default TopicTags
