@@ -1,22 +1,22 @@
-import { posts } from "../stores"
+import { topics } from "../stores"
 
 import {
-  SAVE_ALL_POSTS,
-  SELECT_POST,
+  SAVE_ALL_TOPICS,
+  SELECT_TOPIC,
   LOADING_TRUE,
   LOADING_FALSE
   // HANDLE_ERROR
 } from "../actions/types"
 
-export default (state = posts, action) => {
+export default (state = topics, action) => {
   switch (action.type) {
-    // save all posts into dedicated posts state
-    case SAVE_ALL_POSTS:
+    // save all topics into dedicated topics state
+    case SAVE_ALL_TOPICS:
       return {
         ...state,
         all: action.payload.data
       }
-    case SELECT_POST:
+    case SELECT_TOPIC:
       return action.payload.data
     case LOADING_TRUE:
       return true
