@@ -1,13 +1,13 @@
 import React from "react"
 import { default as Layout } from "../templates/LayoutDefault"
 
-import SegmentFeaturedPosts from "../large/SegmentFeaturedPosts"
-import SegmentLatestPosts from "../large/SegmentLatestPosts"
+import ConnectedFeaturedPosts from "../redux/containers/ConnectedFeaturedPosts"
+import ConnectedLatestPosts from "../redux/containers/ConnectedLatestPosts"
 
-const Home = (props) => (
+const Home = props => (
   <Layout>
-    <SegmentFeaturedPosts />
-    <SegmentLatestPosts />
+    <ConnectedFeaturedPosts />
+    <ConnectedLatestPosts />
   </Layout>
 )
 

@@ -3,10 +3,10 @@ import Layout from "./Layout"
 
 import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
-const LayoutAuth = props => (
+const LayoutAuth = ({ children }) => (
   <Layout>
-    <SegmentCTAHeader />
-    <div className="auth layout">{props.children}</div>
+    <SegmentCTAHeader className="auth header" />
+    <div className="auth layout">{children}</div>
   </Layout>
 )
 

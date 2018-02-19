@@ -1,10 +1,9 @@
 import React from "react"
+// import PropTypes from "prop-types"
 import { Link } from "react-router-dom"
 
-import "../styles/ul.css"
-
-const SegmentDebug = props => {
-  return props.active ? (
+const SegmentDebug = ({ active }) => {
+  return active ? (
     <div id="SegmentDebug" className="debug">
       <ul>
         <li>

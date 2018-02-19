@@ -1,9 +1,11 @@
 import React from "react"
 import { default as Layout } from "../templates/LayoutDefault"
 
-const Posts = (props) => (
+import ConnectedLatestPosts from "../redux/containers/ConnectedLatestPosts"
+
+const Posts = props => (
   <Layout>
-    <h2>Posts</h2>
+    <ConnectedLatestPosts />
   </Layout>
 )
 

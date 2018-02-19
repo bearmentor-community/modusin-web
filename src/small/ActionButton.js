@@ -1,7 +1,7 @@
 import React from "react"
 
-const ActionButton = props => (
-  <button className="action button">{props.children}</button>
+const ActionButton = ({ children }) => (
+  <button className="action button">{children}</button>
 )
 
 export default ActionButton

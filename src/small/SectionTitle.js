@@ -1,7 +1,7 @@
 import React from "react"
 
-const SectionTitle = props => (
-  <h4 className="segment title">{props.children}</h4>
+const SectionTitle = ({ children }) => (
+  <h4 className="segment title">{children}</h4>
 )
 
 export default SectionTitle

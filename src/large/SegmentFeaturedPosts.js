@@ -1,4 +1,6 @@
 import React from "react"
+// import PropTypes from "prop-types"
+import { Link } from "react-router-dom"
 import { Row, Col } from "reactstrap"
 
 import FeaturedPost from "../medium/FeaturedPost"
@@ -40,10 +42,12 @@ const POSTS = [
   }
 ]
 
-const SegmentFeaturedPosts = props => (
+const SegmentFeaturedPosts = ({ posts }) => (
   <Row id="SegmentFeaturedPosts">
     <Col>
-      <SectionTitle>FEATURED</SectionTitle>
+      <Link to="/posts">
+        <SectionTitle>FEATURED</SectionTitle>
+      </Link>
     </Col>
     {POSTS.map((post, index) => {
       return (

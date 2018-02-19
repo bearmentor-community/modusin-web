@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const CTAAvatar = props => {
-  const account = props.account
-
+const CTAAvatar = ({ to, account }) => {
   return (
     <span className="cta avatar">
-      <Link to={props.to}>
+      <Link to={to}>
         <img src={account.image_url} alt={account.name} />
       </Link>
     </span>

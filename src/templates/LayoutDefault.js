@@ -3,13 +3,13 @@ import Layout from "./Layout"
 
 import SegmentCTAHeader from "../large/SegmentCTAHeader"
 
-import TopicTags from "../medium/TopicTags"
+import ConnectedTopicTags from "../redux/containers/ConnectedTopicTags"
 
-const LayoutDefault = props => (
+const LayoutDefault = ({ children }) => (
   <Layout>
     <SegmentCTAHeader />
-    <TopicTags />
-    <div className="default layout">{props.children}</div>
+    <ConnectedTopicTags />
+    <div className="default layout">{children}</div>
   </Layout>
 )
 

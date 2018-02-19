@@ -1,9 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const NavLink = props => (
+const NavLink = ({ to, children }) => (
   <span className="nav-link">
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={to}>{children}</Link>
   </span>
 )
 

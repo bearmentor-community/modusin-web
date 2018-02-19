@@ -5,10 +5,10 @@ import SegmentDebug from "../large/SegmentDebug"
 import SegmentMain from "../large/SegmentMain"
 import SegmentFooter from "../large/SegmentFooter"
 
-const Layout = props => (
+const Layout = ({ children }) => (
   <Container id="Layout">
     <SegmentDebug active={false} />
-    <SegmentMain>{props.children}</SegmentMain>
+    <SegmentMain>{children}</SegmentMain>
     <SegmentFooter />
   </Container>
 )
