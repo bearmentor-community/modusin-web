@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 import { Row, Col } from "reactstrap"
 
 import SmallPost from "../medium/SmallPost"
-
 import SectionTitle from "../small/SectionTitle"
 
 const POSTS = [
@@ -15,7 +14,8 @@ const POSTS = [
       title: "Abstract",
       url: "http://localhost:3000/images/posts/abstract.jpg"
     },
-    author: {
+    creator: {
+      username: "one",
       name: "One Punch Man"
     }
   },
@@ -26,7 +26,8 @@ const POSTS = [
       title: "Abstract",
       url: "http://localhost:3000/images/posts/abstract.jpg"
     },
-    author: {
+    creator: {
+      username: "two",
       name: "Two Times"
     }
   },
@@ -37,7 +38,8 @@ const POSTS = [
       title: "Abstract",
       url: "http://localhost:3000/images/posts/abstract.jpg"
     },
-    author: {
+    creator: {
+      username: "three",
       name: "Three Tree"
     }
   }
