@@ -17,12 +17,12 @@ const POSTS = [
       "The world of branding is changing very much faster than we predicted...",
     image: {
       title: "Branding Bike",
-      url: "http://localhost:3000/images/posts/branding-bike.png"
+      url: `${process.env.REACT_APP_API_URL}/images/posts/branding-bike.png`
     },
     author: {
       name: "M Haidar Hanif",
       username: "mhaidarh",
-      avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
+      avatar_url: `${process.env.REACT_APP_API_URL}/images/avatars/mhaidarh.jpg`
     }
   },
   {
@@ -32,12 +32,12 @@ const POSTS = [
     snippet: "Human is revolutionizing very much faster than we predicted...",
     image: {
       title: "Leadership",
-      url: "http://localhost:3000/images/posts/leadership-stage.jpg"
+      url: `${process.env.REACT_APP_API_URL}/images/posts/leadership-stage.jpg`
     },
     author: {
       name: "Superman",
       username: "superman",
-      avatar_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
+      avatar_url: `${process.env.REACT_APP_API_URL}/images/avatars/mhaidarh.jpg`
     }
   }
 ]

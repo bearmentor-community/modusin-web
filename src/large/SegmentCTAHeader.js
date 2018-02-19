@@ -11,7 +11,7 @@ const auth = {
   account: {
     name: "M Haidar Hanif",
     username: "mhaidarh",
-    image_url: "http://localhost:3000/images/avatars/mhaidarh.jpg"
+    image_url: `${process.env.REACT_APP_API_URL}/images/avatars/mhaidarh.jpg`
   }
 }
 

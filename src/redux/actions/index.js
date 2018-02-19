@@ -44,7 +44,7 @@ export const requestAllPosts = payload => ({
 export const fetchAllPosts = payload => dispatch => {
   dispatch(requestAllPosts(payload))
   // return axios
-  //   .get(`http://localhost:3000/posts`)
+  //   .get(`${process.env.REACT_APP_API_URL}/posts`)
   //   .then(rawResponse => {
   //     return rawResponse.data
   //   })
