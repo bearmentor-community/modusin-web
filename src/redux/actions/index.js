@@ -1,4 +1,4 @@
-// import axios from "axios"
+import axios from "axios"
 
 import {
   // GET_FEATURED_POSTS,
@@ -20,7 +20,8 @@ import {
   // HANDLE_ERROR
 } from "./types"
 
-import { posts, topics } from "../stores"
+// dummy data from initialState
+import { topics } from "../stores"
 
 // -----------------------------------------------------------------------------
 
@@ -28,8 +29,7 @@ import { posts, topics } from "../stores"
 export const saveAllPosts = (payload, response) => ({
   type: SAVE_ALL_POSTS,
   payload: {
-    // data: response.data,
-    data: response,
+    data: response.data,
     received_at: Date.now()
   }
 })
@@ -43,16 +43,14 @@ export const requestAllPosts = payload => ({
 // after finished, call SAVE_ALL_POSTS action
 export const fetchAllPosts = payload => dispatch => {
   dispatch(requestAllPosts(payload))
-  // return axios
-  //   .get(`${process.env.REACT_APP_API_URL}/posts`)
-  //   .then(rawResponse => {
-  //     return rawResponse.data
-  //   })
-  //   .then(response => {
-  //     return dispatch(saveAllPosts(payload, response))
-  //   })
-  const response = posts.all // initialState.posts.all
-  return dispatch(saveAllPosts(payload, response))
+  return axios
+    .get(`${process.env.REACT_APP_API_URL}/posts`)
+    .then(rawResponse => {
+      return rawResponse.data
+    })
+    .then(response => {
+      return dispatch(saveAllPosts(payload, response))
+    })
 }
 
 export const getAllPosts = () => ({

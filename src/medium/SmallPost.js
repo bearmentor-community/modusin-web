@@ -23,11 +23,11 @@ const SmallPost = ({ post }) => (
     </Col>
 
     <Col xs={4} md={4}>
-      <Link to={`/p/${post.id}`} className="divlink">
+      <Link to={`/p/${post.id}`}>
         <img
           className="small image"
-          src={post.image.url}
-          alt={post.image.title}
+          src={`${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`}
+          alt={post.title}
         />
       </Link>
     </Col>
