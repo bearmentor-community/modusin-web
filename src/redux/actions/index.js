@@ -1,19 +1,26 @@
 import axios from "axios"
 
 import {
-  // GET_FEATURED_POSTS,
+  // Posts
+  REQUEST_ALL_POSTS,
   SAVE_ALL_POSTS,
+  // GET_FEATURED_POSTS,
   GET_ALL_POSTS,
+  SELECT_POST,
+  // Topics
+  REQUEST_ALL_TOPICS,
   SAVE_ALL_TOPICS,
   GET_ALL_TOPICS,
-  SELECT_POST,
   SELECT_TOPIC,
+  // Profile
   SELECT_PROFILE,
+  // Account
   ACCOUNT_REGISTER,
   ACCOUNT_LOGIN,
   ACCOUNT_LOGOUT,
   SET_LOGIN_TOKEN,
   SET_DECODED_ACCOUNT,
+  // New
   SUBMIT_NEW_POST
   // LOADING_TRUE,
   // LOADING_FALSE,
@@ -27,6 +34,7 @@ import { topics } from "../stores"
 
 // emit action to save posts data into store's state
 export const saveAllPosts = (payload, response) => ({
+  // these become an action.type & action.payload
   type: SAVE_ALL_POSTS,
   payload: {
     data: response.data,
@@ -35,7 +43,7 @@ export const saveAllPosts = (payload, response) => ({
 })
 
 export const requestAllPosts = payload => ({
-  type: `REQUEST_ALL_POSTS`,
+  type: REQUEST_ALL_POSTS,
   payload
 })
 
@@ -53,7 +61,8 @@ export const fetchAllPosts = payload => dispatch => {
     })
 }
 
-export const getAllPosts = () => ({
+// get all posts for view component's props
+export const getAllPosts = payload => ({
   type: GET_ALL_POSTS
 })
 
@@ -70,7 +79,7 @@ export const saveAllTopics = (payload, response) => ({
 })
 
 export const requestAllTopics = payload => ({
-  type: `REQUEST_ALL_TOPICS`,
+  type: REQUEST_ALL_TOPICS,
   payload
 })
 

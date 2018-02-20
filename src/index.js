@@ -25,11 +25,8 @@ import initialState from "./redux/stores"
 // for updating the store
 import reducers from "./redux/reducers"
 
-import {
-  // get various actions creator to dispatch the actions
-  fetchAllPosts,
-  fetchAllTopics
-} from "./redux/actions"
+// get various actions creator to dispatch the actions
+import { fetchAllPosts, fetchAllTopics } from "./redux/actions"
 
 // -----------------------------------------------------------------------------
 // Local components
@@ -93,9 +90,9 @@ render(App)
 store.subscribe(render)
 
 // Webpack Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept("./App", () => {
-    render(App)
-    store.subscribe(render)
-  })
-}
+// if (module.hot) {
+//   module.hot.accept("./App", () => {
+//     render(App)
+//     store.subscribe(render)
+//   })
+// }

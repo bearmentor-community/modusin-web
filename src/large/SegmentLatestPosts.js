@@ -7,9 +7,6 @@ import SmallPost from "../medium/SmallPost"
 import SectionTitle from "../small/SectionTitle"
 
 const SegmentLatestPosts = ({ posts }) => {
-  // console.log("SegmentLatestPosts.props", props)
-  console.log(posts)
-
   return (
     <Row id="SegmentLatestPosts" xs={8}>
       <Col xs={12}>

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import SegmentLatestPosts from "../../large/SegmentLatestPosts"
 
 const mapStateToProps = (state, ownProps = {}) => {
-  // console.log("mapStateToProps", state)
+  // console.log("mapStateToProps:", state)
   // console.log("ownProps", ownProps)
 
   return {
@@ -12,8 +12,8 @@ const mapStateToProps = (state, ownProps = {}) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: () => {
-    console.log("onClick")
+  onClick: text => {
+    console.log("onClick:", text)
   }
 })
 
