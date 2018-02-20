@@ -5,9 +5,10 @@
 import { posts } from "../stores"
 
 import {
-  SAVE_ALL_POSTS,
   GET_ALL_POSTS,
-  SELECT_POST,
+  SAVE_ALL_POSTS,
+  GET_ONE_POST,
+  SAVE_ONE_POST,
   LOADING_TRUE,
   LOADING_FALSE
   // HANDLE_ERROR
@@ -25,8 +26,16 @@ export default (state = posts, action) => {
       }
     case GET_ALL_POSTS:
       return state.posts.all
-    case SELECT_POST:
-      return action.payload.data
+    case GET_ONE_POST:
+      return {
+        ...state,
+        selected: action.payload.data
+      }
+    case SAVE_ONE_POST:
+      return {
+        ...state,
+        selected: action.payload.data
+      }
     case LOADING_TRUE:
       return true
     case LOADING_FALSE:

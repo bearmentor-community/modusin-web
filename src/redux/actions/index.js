@@ -6,14 +6,18 @@ import {
   SAVE_ALL_POSTS,
   // GET_FEATURED_POSTS,
   GET_ALL_POSTS,
-  SELECT_POST,
   // Topics
   REQUEST_ALL_TOPICS,
   SAVE_ALL_TOPICS,
   GET_ALL_TOPICS,
-  SELECT_TOPIC,
+  // One Post
+  REQUEST_ONE_POST,
+  SAVE_ONE_POST,
+  GET_ONE_POST,
+  // One Topic
+  GET_ONE_TOPIC,
   // Profile
-  SELECT_PROFILE,
+  GET_ONE_PROFILE,
   // Account
   ACCOUNT_REGISTER,
   ACCOUNT_LOGIN,
@@ -31,6 +35,7 @@ import {
 import { topics } from "../stores"
 
 // -----------------------------------------------------------------------------
+// ALL POSTS
 
 // emit action to save posts data into store's state
 export const saveAllPosts = (payload, response) => ({
@@ -69,18 +74,17 @@ export const getAllPosts = payload => ({
 // -----------------------------------------------------------------------------
 // fetch = request => save
 
-// emit action to save topics data into store's state
+export const requestAllTopics = payload => ({
+  type: REQUEST_ALL_TOPICS,
+  payload
+})
+
 export const saveAllTopics = (payload, response) => ({
   type: SAVE_ALL_TOPICS,
   payload: {
     data: response, // no need for .data as we get this from local
     received_at: Date.now()
   }
-})
-
-export const requestAllTopics = payload => ({
-  type: REQUEST_ALL_TOPICS,
-  payload
 })
 
 // fetch topics data from API
@@ -96,19 +100,57 @@ export const getAllTopics = () => ({
 })
 
 // -----------------------------------------------------------------------------
+// ONE POST
 
-export const selectPost = payload => ({
-  type: SELECT_POST,
+export const requestOnePost = payload => ({
+  type: REQUEST_ONE_POST,
   payload
 })
 
-export const selectTopic = payload => ({
-  type: SELECT_TOPIC,
+export const saveOnePost = (payload, response) => ({
+  type: SAVE_ONE_POST,
+  payload: {
+    data: response.data,
+    received_at: Date.now()
+  }
+})
+
+export const fetchOnePost = payload => dispatch => {
+  dispatch(requestOnePost(payload))
+
+  const url = `${process.env.REACT_APP_API_URL}/posts/${payload.id}`
+  // console.log("url...", url)
+
+  return axios
+    .get(url)
+    .then(rawResponse => {
+      // console.log("rawResponse...", rawResponse)
+      return rawResponse.data
+    })
+    .then(response => {
+      // console.log("response...", response)
+      return dispatch(saveOnePost(payload, response))
+    })
+}
+
+// get all posts for view component's props
+export const getOnePost = payload => {
+  console.log("payload in getOnePost", payload)
+  return {
+    type: GET_ONE_POST,
+    payload: {
+      id: payload.id
+    }
+  }
+}
+
+export const getOneTopic = payload => ({
+  type: GET_ONE_TOPIC,
   payload
 })
 
-export const selectProfile = payload => ({
-  type: SELECT_PROFILE,
+export const getOneProfile = payload => ({
+  type: GET_ONE_PROFILE,
   payload
 })
 

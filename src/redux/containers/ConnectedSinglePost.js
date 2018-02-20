@@ -1,29 +1,38 @@
 import { connect } from "react-redux"
 
-import SegmentLatestPosts from "../../large/SegmentLatestPosts"
+import SegmentSinglePost from "../../large/SegmentSinglePost"
+
+import { fetchOnePost, getOnePost } from "../actions"
 
 const mapStateToProps = (state, ownProps = {}) => {
   // console.log("mapStateToProps:", state)
   // console.log("ownProps", ownProps)
 
   return {
-    data: state.posts.all
+    data: state.posts.selected
   }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onClick: text => {
-    console.log("onClick:", text)
+  fetchOnePost: id => {
+    // console.log("id...", id)
+    dispatch(fetchOnePost({ id }))
+  },
+  getOnePost: () => {
+    console.log("getOnePost")
+  },
+  onTest: text => {
+    console.log("onTest:", text)
   }
 })
 
 // create container by connecting
 // the store's state to SegmentLatestPosts' props
-const ConnectedLatestPosts = connect(
+const ConnectedSinglePost = connect(
   // Given Redux state, return props
   mapStateToProps,
   // Given Redux dispatch, return callback props
   mapDispatchToProps
-)(SegmentLatestPosts)
+)(SegmentSinglePost)
 
-export default ConnectedLatestPosts
+export default ConnectedSinglePost
