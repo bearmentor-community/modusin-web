@@ -6,10 +6,7 @@ import { Row, Col } from "reactstrap"
 import SmallPost from "../medium/SmallPost"
 import SectionTitle from "../small/SectionTitle"
 
-const SegmentLatestPosts = ({ posts }) => {
-  // console.log("SegmentLatestPosts.props", props)
-  console.log(posts)
-
+const SegmentLatestPosts = ({ data }) => {
   return (
     <Row id="SegmentLatestPosts" xs={8}>
       <Col xs={12}>
@@ -17,7 +14,7 @@ const SegmentLatestPosts = ({ posts }) => {
           <SectionTitle>Latest posts for you</SectionTitle>
         </Link>
       </Col>
-      {posts.all.map((post, index) => {
+      {data.map((post, index) => {
         return (
           <Col key={index} xs={12} md={8} lg={6}>
             <SmallPost post={post} />

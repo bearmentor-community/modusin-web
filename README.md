@@ -59,7 +59,22 @@ npm install -g yarn
 yarn install
 ```
 
+Create `.env` file that contains:
+
+```sh
+REACT_APP_API_URL=http://localhost:3000
+REACT_APP_JWT_SECRET=verysecrettext
+```
+
+This `.env` can be changed in `production` as well.
+
 ### Running
+
+```sh
+yarn dev
+```
+
+Also run the [backend API](https://github.com/modusintech/api)
 
 ```sh
 yarn dev
@@ -83,7 +98,7 @@ yarn build
 
 GitHub => Netlify => CloudFlare => mhaidarhanif.org/modusin.com
 
-### Running
+### Deploying
 
 ```sh
 yarn deploy

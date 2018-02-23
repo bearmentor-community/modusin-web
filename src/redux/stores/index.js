@@ -1,50 +1,16 @@
 export const posts = {
   store: "POSTS",
+  isFetching: false,
+  isLoading: false,
   featured: [], // array of featured posts
-  all: [
-    // array of dummy posts
-    {
-      id: 1,
-      title: "One One One",
-      image: {
-        title: "Abstract",
-        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
-      },
-      creator: {
-        username: "one",
-        name: "One Punch Man"
-      }
-    },
-    {
-      id: 2,
-      title: "Two Two Two",
-      image: {
-        title: "Abstract",
-        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
-      },
-      creator: {
-        username: "two",
-        name: "Two Times"
-      }
-    },
-    {
-      id: 3,
-      title: "Three Three Three",
-      image: {
-        title: "Abstract",
-        url: `${process.env.REACT_APP_API_URL}/images/posts/abstract.jpg`
-      },
-      creator: {
-        username: "three",
-        name: "Three Tree"
-      }
-    }
-  ],
+  all: [],
   selected: {}
 }
 
 export const topics = {
   store: "TOPICS",
+  isFetching: false,
+  isLoading: false,
   all: [
     // array of basic topics
     {
@@ -77,6 +43,8 @@ export const topics = {
 
 export const profile = {
   store: "PROFILE",
+  isFetching: false,
+  isLoading: false,
   selected: {
     userstore: "", // mhaidarh
     store: "", // M Haidar Hanif
@@ -87,6 +55,8 @@ export const profile = {
 
 export const auth = {
   store: "AUTH",
+  isFetching: false,
+  isLoading: false,
   token: "", // JWT
   account: {}, // decoded JWT
   login: false // true if logged in with JWT
@@ -94,6 +64,8 @@ export const auth = {
 
 export const register = {
   store: "REGISTER",
+  isFetching: false,
+  isLoading: false,
   name: "", // input text
   email: "", // input email
   password: "", // input password
@@ -102,6 +74,8 @@ export const register = {
 
 export const login = {
   store: "LOGIN",
+  isFetching: false,
+  isLoading: false,
   email: "", // input email
   password: "", // input password
   loading: false // when submitting
@@ -109,6 +83,8 @@ export const login = {
 
 export const newPost = {
   store: "NEW_POST",
+  isFetching: false,
+  isLoading: false,
   title: "", // input text
   image_url: "", // input text
   content: "", // input textarea

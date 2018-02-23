@@ -7,7 +7,7 @@ import { topics } from "../stores"
 import {
   SAVE_ALL_TOPICS,
   GET_ALL_TOPICS,
-  SELECT_TOPIC,
+  GET_ONE_TOPIC,
   LOADING_TRUE,
   LOADING_FALSE
   // HANDLE_ERROR
@@ -28,7 +28,7 @@ export default (state = topics, action) => {
         ...state,
         topics: state.topics
       }
-    case SELECT_TOPIC:
+    case GET_ONE_TOPIC:
       return action.payload.data
     case LOADING_TRUE:
       return true
